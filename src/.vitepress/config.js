@@ -7,22 +7,36 @@ module.exports = {
   lastUpdated: true,
   themeConfig: {
     logo: 'logo.png',
+    lastUpdated: 'Last Updated',
+
     nav: [
       { text: 'GitHub', link: 'https://github.com/test-results-reporter/reporter' }
     ],
+
     sidebar: {
       '/': [
         {
           text: 'Guides',
           children: [
             { text: 'Introduction', link: '/guides/intro' },
-            { text: 'Quick Start', link: '/guides/quick-start' }
+            { text: 'Quick Start', link: '/guides/quick-start' },
+            { text: 'Results', link: '/guides/results' },
+            { text: 'Targets', link: '/guides/targets' },
+            { text: 'Environment Variables', link: '/guides/environment-variables' }
           ]
         },
         {
           text: 'Targets',
           children: [
-            { text: 'Slack', link: '/targets/slack' }
+            { text: 'Slack', link: '/targets/slack' },
+            { text: 'Teams', link: '/targets/teams' },
+            { text: 'Custom', link: '/targets/custom' },
+          ]
+        },
+        {
+          text: 'Extensions',
+          children: [
+            { text: 'Report Portal Analysis', link: '/extensions/report-portal-analysis' }
           ]
         }
       ]

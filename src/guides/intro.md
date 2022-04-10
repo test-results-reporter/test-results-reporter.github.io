@@ -4,7 +4,7 @@ Test Results Reporter in an npm package used to publish test results from test f
 
 ## Use Cases
 
-It is generally used as an alerting tool to forward the test results from our CI/CD environment to different entities like teams or slack.
+This library is generally used as an alerting tool to forward the test results from our CI/CD environment to different entities like teams or slack.
 
 ### Supports
 
