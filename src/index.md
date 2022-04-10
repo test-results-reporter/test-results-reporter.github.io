@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /assets/images/logo.png
+heroImage: /logo.png
 heroAlt: Logo image
 heroText: Test Results Reporter
 tagline: Publish test results to Microsoft Teams, Slack and many more

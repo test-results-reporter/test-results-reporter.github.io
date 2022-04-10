@@ -6,7 +6,7 @@ module.exports = {
   description: 'Report test results to slack, teams and many more',
   lastUpdated: true,
   themeConfig: {
-    logo: 'assets/images/logo.png',
+    logo: 'logo.png',
     nav: [
       { text: 'GitHub', link: 'https://github.com/test-results-reporter/reporter' }
     ],
