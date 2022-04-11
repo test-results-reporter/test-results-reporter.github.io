@@ -36,10 +36,14 @@ module.exports = {
         {
           text: 'Extensions',
           children: [
+            { text: 'Links', link: '/extensions/links' },
             { text: 'Report Portal Analysis', link: '/extensions/report-portal-analysis' }
           ]
         }
       ]
     }
+  },
+  markdown: {
+    lineNumbers: true
   }
 }
