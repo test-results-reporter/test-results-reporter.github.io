@@ -22,6 +22,7 @@ module.exports = {
             { text: 'Quick Start', link: '/guides/quick-start' },
             { text: 'Results', link: '/guides/results' },
             { text: 'Targets', link: '/guides/targets' },
+            { text: 'Extensions', link: '/guides/extensions' },
             { text: 'Environment Variables', link: '/guides/environment-variables' }
           ]
         },

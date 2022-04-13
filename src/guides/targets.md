@@ -1,16 +1,16 @@
 # Targets
 
-Targets define where to publish the test results.
+Targets are responsible for publishes the test results to respective entities.
 
 ## Supports
 
 Target types.
 
-✅ Slack
+✅ [Slack](/targets/slack)
 
-✅ Teams (Microsoft Teams)
+✅ [Teams](/targets/teams) (Microsoft Teams)
 
-✅ Custom
+✅ [Custom](/targets/custom)
 
 ## Arguments
 
@@ -18,17 +18,21 @@ Target types.
 
 Name of the target.
 
-#### > condition (string)
+#### > condition (string) _(optional)_
 
 Defines the usage of a target.
 
 - `pass`
 - `fail`
-- `passOrFail`
+- `passOrFail`  _(default)_
 
 #### > inputs (object)
 
 Custom inputs to the target.
+
+#### > extensions (object[]) _(optional)_
+
+List of extensions to be enabled on the current target.
 
 ## Config
 

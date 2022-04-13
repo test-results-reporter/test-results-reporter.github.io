@@ -20,7 +20,7 @@ This library is generally used as an alerting tool to forward the test results f
 
 #### Teams
 
-![slack](../assets/images/teams/test-summary-single-suite.png)
+![teams](../assets/images/teams/test-summary-single-suite.png)
 
 ## Need Help
 
