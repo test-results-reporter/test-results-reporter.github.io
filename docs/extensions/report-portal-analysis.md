@@ -34,24 +34,33 @@ Launch Id
 
 Sample partial config file.
 
-```json {10-18}
+```json {11-19}
 {
-  "targets": [
+  "reports": [
     {
-      "name": "teams",
-      "inputs": {
-        "url": "<incoming-webhook-url>",
-        "publish": "test-summary"
-      },
-      "extensions": [
+      "targets": [
         {
-          "name": "report-portal-analysis",
+          "name": "teams",
           "inputs": {
-            "url": "<report-portal-base-url>",
-            "api_key": "<api-key>",
-            "project": "<project-id>",
-            "launch_id": "<launch-id>"
-          }   
+            "url": "<teams-incoming-webhook-url>"
+          },
+          "extensions": [
+            {
+              "name": "report-portal-analysis",
+              "inputs": {
+                "url": "<report-portal-base-url>",
+                "api_key": "<api-key>",
+                "project": "<project-id>",
+                "launch_id": "<launch-id>"
+              }   
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "type": "testng",
+          "files": ["path/to/testng-results.xml"]
         }
       ]
     }

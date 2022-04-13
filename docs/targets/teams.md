@@ -60,3 +60,30 @@ This report will include the failed test case names along with the failure reaso
 
 ![failure-details](../assets/images/teams/teams-failure-details.png)
 
+## Examples
+
+Sample partial config file.
+
+```json {5-11}
+{
+  "reports": [
+    {
+      "targets": [
+        {
+          "name": "teams",
+          "inputs": {
+            "url": "<teams-incoming-webhook-url>",
+            "publish": "test-summary-slim"
+          }
+        }
+      ],
+      "results": [
+        {
+          "type": "testng",
+          "files": ["path/to/testng-results.xml"]
+        }
+      ]
+    }
+  ]
+}
+```
