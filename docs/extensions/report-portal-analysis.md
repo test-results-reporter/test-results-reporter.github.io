@@ -77,3 +77,16 @@ Launch id will be generated dynamically during the test execution. To use it in 
 - [TestNG](https://github.com/reportportal/agent-java-testNG/issues/180)
 - [mocha](https://github.com/reportportal/agent-js-mocha/issues/78)
 
+## Notes
+
+Acronyms and colour codings are similar to ReportPortal
+
+🔴 PB - Product Bug
+
+🟡 AB - Automation Bug
+
+🔵 SI - System Issue
+
+◯ ND - Not Defect
+
+🟠 TI - To Investigate
