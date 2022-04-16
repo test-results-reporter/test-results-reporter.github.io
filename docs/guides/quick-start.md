@@ -13,7 +13,9 @@ It includes the details of `targets` and `results`.
       "targets": [
         {
           "name": "teams",
-          "url": "<teams-incoming-webhook-url>"
+          "inputs": {
+            "url": "<teams-incoming-webhook-url>"
+          }
         }
       ],
       "results": [

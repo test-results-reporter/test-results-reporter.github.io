@@ -9,6 +9,9 @@ module.exports = {
     logo: 'logo.png',
     lastUpdated: 'Last Updated',
 
+    search: true,
+    searchMaxSuggestions: 10,
+
     nav: [
       { text: 'GitHub', link: 'https://github.com/test-results-reporter/reporter' }
     ],
@@ -37,7 +40,7 @@ module.exports = {
         {
           text: 'Extensions',
           children: [
-            { text: 'Links', link: '/extensions/links' },
+            { text: 'Hyperlinks', link: '/extensions/hyperlinks' },
             { text: 'Report Portal Analysis', link: '/extensions/report-portal-analysis' }
           ]
         }

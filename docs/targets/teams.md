@@ -49,7 +49,7 @@ It includes a test title, total duration and success percentage. If multiple sui
 It just includes a test title, total duration and success percentage. This report will totally ignore the test suites.
 
 ::: tip
-This report will help you to maintain your primary channels clean.
+This report type  helps to maintain primary channels clean.
 :::
 
 ![slim-multiple-suite](../assets/images/teams/teams-test-summary-slim-multiple-suites.png)

@@ -30,6 +30,10 @@ Launch Id
 
 ![teams-link](../assets/images/teams/teams-report-portal-analysis.png)
 
+### Slack
+
+![slack-link](../assets/images/slack/slack-report-portal-analysis.png)
+
 ## Examples
 
 Sample partial config file.
@@ -79,7 +83,9 @@ Launch id will be generated dynamically during the test execution. To use it in 
 
 ## Notes
 
-Acronyms and colour codings are similar to ReportPortal
+Acronyms and color codings are similar to ReportPortal.
+
+::: tip
 
 🔴 PB - Product Bug
 
@@ -90,3 +96,5 @@ Acronyms and colour codings are similar to ReportPortal
 ◯ ND - Not Defect
 
 🟠 TI - To Investigate
+
+:::

@@ -1,6 +1,6 @@
-# Links
+# Hyperlinks
 
-Links extension will add handy links to the teams or slack reports.
+Hyperlinks extension will attach links to your teams or slack reports.
 
 ## Arguments
 
@@ -21,6 +21,10 @@ Url to link to the given text in the message.
 ### Teams
 
 ![teams-link](../assets/images/teams/teams-links.png)
+
+### Slack
+
+![slack-link](../assets/images/slack/slack-hyperlinks.png)
 
 ## Examples
 

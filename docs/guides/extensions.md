@@ -6,9 +6,9 @@ Extensions add additional behavior to the targets.
 
 Extension types.
 
-✅ [Links](/extensions/links)
+✅ [Hyperlinks](/extensions/hyperlinks)
 
-✅ [Report Portal Analysis](/extensions/report-portal-analysis)
+✅ [ReportPortal Analysis](/extensions/report-portal-analysis)
 
 ## Arguments
 
