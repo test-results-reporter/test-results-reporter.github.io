@@ -1,3 +1,8 @@
+---
+tags:
+  - link
+---
+
 # Hyperlinks
 
 Hyperlinks extension will attach links to your teams or slack reports.

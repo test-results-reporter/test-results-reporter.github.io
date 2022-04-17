@@ -55,6 +55,12 @@ Sample partial config file.
         }
       ]
     }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
+    }
   ]
 }
 ```

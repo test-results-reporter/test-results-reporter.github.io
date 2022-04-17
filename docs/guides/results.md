@@ -29,10 +29,18 @@ Path to the test result files.
 
 ## Config
 
-Sample partial config file.
+Sample config file.
 
-```json
+```json {11-14}
 {
+  "targets": [
+    {
+      "name": "teams",
+      "inputs": {
+        "url": "<incoming-webhook-url>"
+      }
+    }
+  ],
   "results": [
     {
       "type": "testng",

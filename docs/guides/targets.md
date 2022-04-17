@@ -36,9 +36,9 @@ List of extensions to be enabled on the current target.
 
 ## Config
 
-Sample partial config file.
+Sample config file.
 
-```json
+```json {3-9}
 {
   "targets": [
     {
@@ -47,6 +47,12 @@ Sample partial config file.
         "url": "<incoming-webhook-url>",
         "publish": "test-summary"
       }
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }
