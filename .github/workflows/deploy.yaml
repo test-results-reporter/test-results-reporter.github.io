@@ -20,4 +20,4 @@ jobs:
         TARGET_REPO: test-results-reporter/test-results-reporter.github.io
         TARGET_BRANCH: docs
         BUILD_SCRIPT: npm i && npm run docs:build
-        BUILD_DIR: docs/.vitepress/dist
+        BUILD_DIR: docs/.vuepress/dist
