@@ -7,7 +7,16 @@ tags:
 
 Hyperlinks extension will attach links to your teams or slack reports.
 
-## Arguments
+> Defaults
+
+::: details DEFAULTS
+
+- hook: `end`
+- condition: `passOrFail`
+
+:::
+
+## Inputs
 
 #### > links (object[])
 
@@ -47,7 +56,7 @@ Sample partial config file.
           },
           "extensions": [
             {
-              "name": "links",
+              "name": "hyperlinks",
               "inputs": {
                 "links": [
                   {

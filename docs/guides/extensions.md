@@ -8,6 +8,8 @@ Extension types.
 
 ✅ [Hyperlinks](/extensions/hyperlinks)
 
+✅ [Mentions](/extensions/mentions)
+
 ✅ [ReportPortal Analysis](/extensions/report-portal-analysis)
 
 ## Arguments

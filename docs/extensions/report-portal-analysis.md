@@ -6,7 +6,14 @@ In ReportPortal, failures can be associated with product bug, automation issue, 
 
 This extension will help you to display the ReportPortal analysis in yours teams or slack messages.
 
-## Arguments
+::: details DEFAULTS
+
+- hook: `end`
+- condition: `fail`
+
+:::
+
+## Inputs
 
 #### > url (string)
 

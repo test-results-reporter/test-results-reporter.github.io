@@ -59,6 +59,7 @@ module.exports = {
         collapsable: false,
         children: [
           '/extensions/hyperlinks',
+          '/extensions/mentions',
           '/extensions/report-portal-analysis'
         ]
       }
