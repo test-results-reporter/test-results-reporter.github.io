@@ -91,11 +91,11 @@ Rotation users.
 
 ### Teams
 
-<!-- ![teams-link](../assets/images/teams/teams-mentions.png) -->
+![teams-link](../assets/images/teams/teams-mentions.png)
 
 ### Slack
 
-<!-- ![slack-link](../assets/images/slack/slack-mentions.png) -->
+![slack-link](../assets/images/slack/slack-mentions.png)
 
 ## Examples
 
