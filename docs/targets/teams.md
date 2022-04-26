@@ -62,7 +62,7 @@ This report will include the failed test case names along with the failure reaso
 
 ## Examples
 
-Sample partial config file.
+Sample config file.
 
 ```json {5-11}
 {

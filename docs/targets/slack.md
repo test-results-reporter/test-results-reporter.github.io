@@ -59,3 +59,31 @@ This report type helps to maintain primary channels clean.
 This report will include the failed test case names along with the failure reasons.
 
 ![failure-details](../assets/images/slack/slack-failure-details.png)
+
+## Examples
+
+Sample config file.
+
+```json {5-11}
+{
+  "reports": [
+    {
+      "targets": [
+        {
+          "name": "slack",
+          "inputs": {
+            "url": "<slack-incoming-webhook-url>",
+            "publish": "test-summary-slim"
+          }
+        }
+      ],
+      "results": [
+        {
+          "type": "testng",
+          "files": ["path/to/testng-results.xml"]
+        }
+      ]
+    }
+  ]
+}
+```
