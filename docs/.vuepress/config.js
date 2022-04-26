@@ -69,7 +69,13 @@ module.exports = {
     lineNumbers: true
   },
   plugins: [
-    '@vuepress/back-to-top'
+    '@vuepress/back-to-top',
+    [
+      'vuepress-plugin-sitemap',
+      {
+        hostname: 'https://test-results-reporter.github.io/'
+      }
+    ],
   ],
-  
+
 }
