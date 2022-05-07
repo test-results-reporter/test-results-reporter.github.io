@@ -32,12 +32,12 @@ module.exports = {
     searchMaxSuggestions: 10,
 
     nav: [
-      { text: 'GitHub', link: 'https://github.com/test-results-reporter/reporter' }
+      { text: '🌟 GitHub', link: 'https://github.com/test-results-reporter/reporter' }
     ],
 
     sidebar: [
       {
-        title: 'Guides',
+        title: '📚 Guides',
         collapsable: false,
         children: [
           '/guides/intro',
@@ -49,7 +49,7 @@ module.exports = {
         ]
       },
       {
-        title: 'Targets',
+        title: '🎯 Targets',
         collapsable: false,
         children: [
           '/targets/slack',
@@ -58,7 +58,7 @@ module.exports = {
         ]
       },
       {
-        title: 'Extensions',
+        title: '🪜 Extensions',
         collapsable: false,
         children: [
           '/extensions/hyperlinks',
@@ -66,7 +66,13 @@ module.exports = {
           '/extensions/report-portal-analysis'
         ]
       }
-    ]
+    ],
+
+    docsRepo: 'test-results-reporter/test-results-reporter.github.io',
+    docsDir: 'docs',
+    docsBranch: 'main',
+    editLinks: true,
+    editLinkText: '✏️ Help us improve this page!'
   },
   markdown: {
     lineNumbers: true
