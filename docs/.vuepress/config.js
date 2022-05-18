@@ -63,7 +63,9 @@ module.exports = {
         children: [
           '/extensions/hyperlinks',
           '/extensions/mentions',
-          '/extensions/report-portal-analysis'
+          '/extensions/report-portal-analysis',
+          '/extensions/report-portal-history',
+          '/extensions/quick-chart-test-summary'
         ]
       }
     ],

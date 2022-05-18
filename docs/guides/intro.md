@@ -16,11 +16,11 @@ This library is generally used as an alerting tool to forward the test results f
 
 #### Slack
 
-![slack](../assets/images/slack/test-summary-single-suite.png)
+![slack](../assets/images/slack/slack-preview.png)
 
 #### Teams
 
-![teams](../assets/images/teams/test-summary-single-suite.png)
+![teams](../assets/images/teams/teams-preview.png)
 
 ## Need Help
 
