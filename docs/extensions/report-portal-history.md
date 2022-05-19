@@ -1,3 +1,8 @@
+---
+tags:
+  - last runs
+---
+
 # ReportPortal History
 
 [ReportPortal](https://reportportal.io/) is an open-source tool that allows testers and key project stakeholders to manage and view all of their testing results and reports in one place.
@@ -38,6 +43,10 @@ If fetching launch id is difficult, we can just use the launch name. This tool w
 ::: danger
 If `launch_name` is mentioned, make sure there are no other new runs triggered on the same launch name before the reporting is finished.
 :::
+
+#### > history_depth (number)
+
+Number of last runs to display.
 
 **Examples**
 

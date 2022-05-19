@@ -192,6 +192,77 @@ One of the user will be mentioned based on the [week number](https://www.epochco
 }
 ```
 
+#### Disabled user with multiple layers.
+
+The first layer will be used from `06 AM` to `05 PM` everyday where **Mary** user will be tagged always as **Jon** is disabled. The second layer will be used from `05 PM` to next day `06 AM`.
+
+```js {17-18,25}
+{
+  "reports": [
+    {
+      "targets": [
+        {
+          "name": "slack",
+          "inputs": {
+            "url": "<slack-incoming-webhook-url>"
+          },
+          "extensions": [
+            {
+              "name": "mentions",
+              "inputs": {
+                "schedule": {
+                  "layers": [
+                    {
+                      "start": "06:00:00",
+                      "end": "17:00:00",
+                      "rotation": {
+                        "every": "week",
+                        "users": [
+                          {
+                            "name": "Jon",
+                            "slack_uid": "ULA15K66N",
+                            "enable": false
+                          },
+                          {
+                            "name": "Mary",
+                            "slack_uid": "ULA15K66M"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "rotation": {
+                        "every": "day",
+                        "users": [
+                          {
+                            "name": "Gary",
+                            "slack_uid": "ULA15K66A"
+                          },
+                          {
+                            "name": "Zen",
+                            "slack_uid": "ULA15K66B"
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }   
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "type": "testng",
+          "files": ["path/to/testng-results.xml"]
+        }
+      ]
+    }
+  ]
+}
+```
+
 ## Notes
 
 This library uses [rosters](https://github.com/test-results-reporter/rosters) to support on-call schedules.

@@ -12,6 +12,10 @@ Extension types.
 
 ✅ [ReportPortal Analysis](/extensions/report-portal-analysis)
 
+✅ [ReportPortal History](/extensions/report-portal-history)
+
+✅ [QuickChart Test Summary](/extensions/quick-chart-test-summary)
+
 ## Arguments
 
 #### > name (string)
