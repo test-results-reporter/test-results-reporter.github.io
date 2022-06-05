@@ -30,6 +30,15 @@ Text to display on the message.
 
 Url to link to the given text in the message.
 
+#### > [Optional] link.condition (string)
+
+Condition on which the given link should be added to the message.
+- `pass`
+- `fail`
+- `passOrFail`
+
+> Defaults to **passOrFail**
+
 ## Reports
 
 ### Teams
@@ -65,7 +74,8 @@ Sample partial config file.
                   },
                   {
                     "text": "Video",
-                    "url": "<video-url>"
+                    "url": "<video-url>",
+                    "condition": "fail"
                   }
                 ]
               }   

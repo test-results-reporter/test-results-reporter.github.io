@@ -1,6 +1,7 @@
 # QuickChart - Test Summary
 
-::: danger
+::: danger NOTE
+
 This extension will be officially released on or before 22/05/2022.
 :::
 
