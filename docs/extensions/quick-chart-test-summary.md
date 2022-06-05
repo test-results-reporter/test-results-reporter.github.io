@@ -1,10 +1,5 @@
 # QuickChart - Test Summary
 
-::: danger NOTE
-
-This extension will be officially released on or before 22/05/2022.
-:::
-
 [QuickChart](https://quickchart.io/) helps generate chart images with a simple, open API.
 
 This extension will attach a radial gauge representing total pass percentage.
