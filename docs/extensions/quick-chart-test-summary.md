@@ -1,9 +1,5 @@
 # QuickChart - Test Summary
 
-::: danger
-This extension will be officially released on or before 22/05/2022.
-:::
-
 [QuickChart](https://quickchart.io/) helps generate chart images with a simple, open API.
 
 This extension will attach a radial gauge representing total pass percentage.
@@ -15,6 +11,14 @@ This extension will attach a radial gauge representing total pass percentage.
 
 :::
 
+## Inputs
+
+#### > url (string)
+
+Quick Chart custom url _(https://your-domain.quickchart.com)_.
+
+> Defaults to https://quickchart.io
+
 ## Reports
 
 ### Teams
@@ -24,3 +28,68 @@ This extension will attach a radial gauge representing total pass percentage.
 ### Slack
 
 ![slack-link](../assets/images/slack/slack-qc.png)
+
+## Examples
+
+#### Default
+
+```json {11-19}
+{
+  "reports": [
+    {
+      "targets": [
+        {
+          "name": "teams",
+          "inputs": {
+            "url": "<teams-incoming-webhook-url>"
+          },
+          "extensions": [
+            {
+              "name": "quick-chart-test-summary"   
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "type": "testng",
+          "files": ["path/to/testng-results.xml"]
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### Custom URL
+
+```json {11-19}
+{
+  "reports": [
+    {
+      "targets": [
+        {
+          "name": "teams",
+          "inputs": {
+            "url": "<teams-incoming-webhook-url>"
+          },
+          "extensions": [
+            {
+              "name": "quick-chart-test-summary",
+              "inputs": {
+                "url": "<quick-chart-base-url>"
+              }   
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "type": "testng",
+          "files": ["path/to/testng-results.xml"]
+        }
+      ]
+    }
+  ]
+}
+```

@@ -35,7 +35,7 @@ Launch id will be generated dynamically during the test execution. To use it in 
 
 If fetching launch id is difficult, we can just use the launch name. This tool will fetch the latest launch id based on the given launch name.
 
-::: danger
+::: danger NOTE
 If `launch_name` is mentioned, make sure there are no other new runs triggered on the same launch name before the reporting is finished.
 :::
 
