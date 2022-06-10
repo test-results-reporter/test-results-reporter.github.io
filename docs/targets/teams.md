@@ -30,6 +30,12 @@ Overrides the default title.
 
 Adds a custom suffix to the title.
 
+#### > width (string) _(optional)_
+
+Controls the width of the message.
+
+> Supports `Full` as width.
+
 ## Reports
 
 ### test-summary
