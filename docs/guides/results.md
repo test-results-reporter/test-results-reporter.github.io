@@ -6,6 +6,8 @@ This library uses [test-results-parser](https://github.com/test-results-reporter
 
 Test results reporter type.
 
+✅ Mocha (Json & mochawesome)
+
 ✅ TestNG
 
 ✅ JUnit
@@ -17,6 +19,12 @@ Test results reporter type.
 #### > type (string)
 
 Name of the test runner.
+::: details types
+- `mocha`
+- `testng`
+- `junit`
+- `xunit`
+:::
 
 #### > files (string[])
 
