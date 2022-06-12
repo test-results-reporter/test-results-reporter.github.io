@@ -38,7 +38,7 @@ module.exports = {
     sidebar: [
       {
         title: '📚 Guides',
-        collapsable: false,
+        collapsable: true,
         children: [
           '/guides/intro',
           '/guides/quick-start',
@@ -50,7 +50,7 @@ module.exports = {
       },
       {
         title: '🎯 Targets',
-        collapsable: false,
+        collapsable: true,
         children: [
           '/targets/slack',
           '/targets/teams',
@@ -60,13 +60,21 @@ module.exports = {
       },
       {
         title: '🪜 Extensions',
-        collapsable: false,
+        collapsable: true,
         children: [
           '/extensions/hyperlinks',
           '/extensions/mentions',
           '/extensions/report-portal-analysis',
           '/extensions/report-portal-history',
           '/extensions/quick-chart-test-summary'
+        ]
+      },
+      {
+        title: '🥣 Examples',
+        collapsable: true,
+        children: [
+          '/examples/frameworks',
+          '/examples/ci',
         ]
       }
     ],
@@ -75,7 +83,7 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'main',
     editLinks: true,
-    editLinkText: '✏️ Help us improve this page!'
+    editLinkText: '✏️ Edit this page!'
   },
   markdown: {
     lineNumbers: true
