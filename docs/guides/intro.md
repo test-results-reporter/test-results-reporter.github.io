@@ -1,6 +1,6 @@
 # Introduction
 
-Test Results Reporter in an npm package used to publish test results from test frameworks like **Mocha**, **JUnit**, **TestNG** and **xUnit** to Microsoft **Teams**, **Slack** and many more.
+Test Results Reporter in an npm package used to publish test results from test frameworks like **Mocha**, **CucumberJS**, **JUnit**, **TestNG** and **xUnit** to Microsoft **Teams**, **Slack** and many more.
 
 ## Use Cases
 

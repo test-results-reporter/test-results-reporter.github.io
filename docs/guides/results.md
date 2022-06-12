@@ -14,6 +14,8 @@ Test results reporter type.
 
 ✅ xUnit
 
+✅ CucumberJS (Json)
+
 ## Arguments
 
 #### > type (string)
@@ -24,6 +26,7 @@ Name of the test runner.
 - `testng`
 - `junit`
 - `xunit`
+- `cucumberjs`
 :::
 
 #### > files (string[])
