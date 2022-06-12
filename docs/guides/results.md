@@ -14,7 +14,7 @@ Test results reporter type.
 
 ✅ xUnit
 
-✅ CucumberJS (Json)
+✅ Cucumber (Json)
 
 ## Arguments
 
