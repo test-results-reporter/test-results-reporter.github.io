@@ -26,7 +26,7 @@ Name of the test runner.
 - `testng`
 - `junit`
 - `xunit`
-- `cucumberjs`
+- `cucumber`
 :::
 
 #### > files (string[])
