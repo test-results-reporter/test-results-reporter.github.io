@@ -6,17 +6,28 @@ This library uses [test-results-parser](https://github.com/test-results-reporter
 
 Test results reporter type.
 
+✅ Mocha (Json & mochawesome)
+
 ✅ TestNG
 
 ✅ JUnit
 
 ✅ xUnit
 
+✅ Cucumber (Json)
+
 ## Arguments
 
 #### > type (string)
 
 Name of the test runner.
+::: details types
+- `mocha`
+- `testng`
+- `junit`
+- `xunit`
+- `cucumber`
+:::
 
 #### > files (string[])
 
