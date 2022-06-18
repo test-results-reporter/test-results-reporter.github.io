@@ -48,6 +48,19 @@ If `launch_name` is mentioned, make sure there are no other new runs triggered o
 
 Number of last runs to display.
 
+#### > title (string)
+
+Title of the extension.
+
+> default to `Last 'n' Runs`
+
+#### > separator (boolean)
+
+Separator for the extension.
+
+> default to `true` for teams target
+> default to `false` for slack target
+
 **Examples**
 
 - [TestNG](https://github.com/reportportal/agent-java-testNG/issues/180)

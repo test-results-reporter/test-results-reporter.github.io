@@ -36,6 +36,14 @@ Controls the width of the message.
 
 > Supports `Full` as width.
 
+#### > duration (string) _(optional)_
+
+Format of the duration.
+
+> Supports
+> - colonNotation (default) - `9:10`
+> - verbose - `9 minutes 10 seconds`
+
 ## Reports
 
 ### test-summary

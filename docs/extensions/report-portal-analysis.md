@@ -39,6 +39,19 @@ If fetching launch id is difficult, we can just use the launch name. This tool w
 If `launch_name` is mentioned, make sure there are no other new runs triggered on the same launch name before the reporting is finished.
 :::
 
+#### > title (string)
+
+Title of the extension.
+
+> default to `Report Portal Analysis`
+
+#### > separator (boolean)
+
+Separator for the extension.
+
+> default to `true` for teams target
+> default to `false` for slack target
+
 ## Reports
 
 ### Teams

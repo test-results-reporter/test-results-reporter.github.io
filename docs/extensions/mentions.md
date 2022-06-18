@@ -87,6 +87,19 @@ Rotate a user on the given schedule.
 
 Rotation users.
 
+#### > title (string)
+
+Title of the extension.
+
+> default to empty
+
+#### > separator (boolean)
+
+Separator for the extension.
+
+> default to `true` for teams target
+> default to `false` for slack target
+
 ## Reports
 
 ### Teams

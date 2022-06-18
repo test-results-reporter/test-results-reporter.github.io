@@ -39,6 +39,19 @@ Condition on which the given link should be added to the message.
 
 > Defaults to **passOrFail**
 
+#### > title (string)
+
+Title of the extension.
+
+> default to empty
+
+#### > separator (boolean)
+
+Separator for the extension.
+
+> default to `true` for teams target
+> default to `false` for slack target
+
 ## Reports
 
 ### Teams
