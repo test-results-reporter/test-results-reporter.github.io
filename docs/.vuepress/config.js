@@ -54,6 +54,7 @@ module.exports = {
         children: [
           '/targets/slack',
           '/targets/teams',
+          '/targets/chat',
           '/targets/custom',
           '/targets/delay'
         ]
@@ -66,7 +67,8 @@ module.exports = {
           '/extensions/mentions',
           '/extensions/report-portal-analysis',
           '/extensions/report-portal-history',
-          '/extensions/quick-chart-test-summary'
+          '/extensions/quick-chart-test-summary',
+          '/extensions/percy-analysis'
         ]
       },
       {

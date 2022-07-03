@@ -1,6 +1,28 @@
 # Introduction
 
-Test Results Reporter in an npm package used to publish test results from test frameworks like **Mocha**, **Cucumber**, **JUnit**, **TestNG** and **xUnit** to Microsoft **Teams**, **Slack** and many more.
+Test Results Reporter in an npm package used to publish test results from test frameworks like **Mocha**, **Cucumber**, **JUnit**, **TestNG** and **xUnit** to **Microsoft Teams**, **Slack**, **Google Chat** and many more.
+
+### Targets
+
+<img height="48" style="margin: 6px;" src="../assets/images/logos/slack.png" alt="slack" title="slack" />
+<img height="48" style="margin: 6px;"  src="../assets/images/logos/teams.png" alt="teams" title="teams" />
+<img height="48" style="margin: 6px;"  src="../assets/images/logos/chat.png" alt="chat" title="chat" />
+
+### Extensions
+
+<img height="48" style="margin: 6px;" src="../assets/images/logos/reportportal.jpeg" alt="reportportal" title="reportportal" />
+<img height="48" style="margin: 6px;"  src="../assets/images/logos/quickchart.png" alt="quickchart" title="quickchart" />
+<img height="48" style="margin: 6px;"  src="../assets/images/logos/hyperlink.png" alt="hyperlink" title="hyperlink" />
+<img height="48" style="margin: 6px;"  src="../assets/images/logos/mentions.png" alt="mentions" title="mentions" />
+<img height="48" style="margin: 6px;"  src="../assets/images/logos/percy.png" alt="percy" title="percy" />
+
+### Test Results
+
+<img height="48" style="margin: 6px;" src="../assets/images/logos/testng.png" alt="testng" title="testng" />
+<img height="48" style="margin: 6px;"  src="../assets/images/logos/junit.png" alt="junit" title="junit" />
+<img height="48" style="margin: 6px;"  src="../assets/images/logos/cucumber.png" alt="cucumber" title="cucumber" />
+<img height="48" style="margin: 6px;"  src="../assets/images/logos/mocha.png" alt="mocha" title="mocha" />
+<img height="48" style="margin: 6px;"  src="../assets/images/logos/xunit.png" alt="xunit" title="xunit" />
 
 ## Use Cases
 

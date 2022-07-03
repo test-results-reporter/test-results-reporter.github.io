@@ -1,22 +1,22 @@
 ---
 tags:
-  - microsoft teams
-  - teams
+  - google chat
+  - chat
 ---
 
-# Teams
+# Chat
 
-Microsoft Teams is a communication platform. To send reports to a teams channel, we need to create a incoming webhook url. Follow this [docs](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) to create one.
+Chat is a communication platform from Google. To send reports to a chat space, we need to create a incoming webhook url. Follow this [docs](https://developers.google.com/chat/how-tos/webhooks#create_a_webhook) to create one.
 
 ## Arguments
 
 #### > url (string)
 
-Incoming webhook url from teams.
+Incoming webhook url from chat.
 
 #### > publish (string) _(optional)_
 
-Type of report to be published to the teams channel.
+Type of report to be published to the chat channel.
 
 - test-summary _(default)_
 - test-summary-slim
@@ -36,11 +36,6 @@ Overrides the default title.
 
 Adds a custom suffix to the title.
 
-#### > width (string) _(optional)_
-
-Controls the width of the message.
-
-> Supports `Full` as width.
 
 ## Reports
 
@@ -50,11 +45,11 @@ It includes a test title, total duration and success percentage. If multiple sui
 
 > Single Test Suite
 
-![single-suite](../assets/images/teams/teams-test-summary-single-suite.png)
+![single-suite](../assets/images/chat/chat-test-summary-single-suite.png)
 
 > Multiple Test Suites
 
-![multiple-suite](../assets/images/teams/teams-test-summary-multiple-suites.png)
+![multiple-suite](../assets/images/chat/chat-test-summary-multiple-suites.png)
 
 ### test-summary-slim
 
@@ -64,13 +59,11 @@ It just includes a test title, total duration and success percentage. This repor
 This report type  helps to maintain primary channels clean.
 :::
 
-![slim-multiple-suite](../assets/images/teams/teams-test-summary-slim-multiple-suites.png)
-
 ### failure-details
 
 This report will include the failed test case names along with the failure reasons.
 
-![failure-details](../assets/images/teams/teams-failure-details.png)
+![failure-details](../assets/images/chat/chat-failure-details.png)
 
 ## Examples
 
@@ -82,9 +75,9 @@ Sample config file.
     {
       "targets": [
         {
-          "name": "teams",
+          "name": "chat",
           "inputs": {
-            "url": "<teams-incoming-webhook-url>",
+            "url": "<chat-incoming-webhook-url>",
             "publish": "test-summary-slim"
           }
         }

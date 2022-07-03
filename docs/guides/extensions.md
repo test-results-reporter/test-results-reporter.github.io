@@ -16,6 +16,8 @@ Extension types.
 
 ✅ [QuickChart Test Summary](/extensions/quick-chart-test-summary)
 
+✅ [Percy Analysis](/extensions/percy-analysis)
+
 ## Arguments
 
 #### > name (string)
@@ -35,6 +37,18 @@ Defines the usage of a target.
 #### > inputs (object)
 
 Custom inputs to the extension.
+
+#### > inputs.title (string)
+
+Title of the extension.
+
+> Applicable for most extensions.
+
+#### > inputs.title_link (string)
+
+Title with a clickable link.
+
+> Applicable for most extensions.
 
 ## Config
 

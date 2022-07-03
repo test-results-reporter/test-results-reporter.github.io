@@ -40,6 +40,10 @@ User's [UPN](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/plan
 
 User's [unique id](https://www.workast.com/help/articles/61000165203) in slack. Mandatory if the target is **slack**.
 
+#### > users.chat_uid (string)
+
+User's [unique id](https://stackoverflow.com/a/58923385) in chat. Mandatory if the target is **chat**.
+
 #### > users.enable (boolean) _(optional)_
 
 Enable or disable user's availability for on-call support. 

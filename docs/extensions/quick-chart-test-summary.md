@@ -11,6 +11,12 @@ This extension will attach a radial gauge representing total pass percentage.
 
 :::
 
+::: danger LIMITATIONS
+
+This extension is not supported for **google chat** target.
+
+:::
+
 ## Inputs
 
 #### > url (string)

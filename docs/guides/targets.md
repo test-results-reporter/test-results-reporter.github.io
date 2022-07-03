@@ -10,6 +10,8 @@ Target types.
 
 ✅ [Teams](/targets/teams) (Microsoft Teams)
 
+✅ [Chat](/targets/chat) (Google Chat)
+
 ✅ [Custom](/targets/custom)
 
 ## Arguments
