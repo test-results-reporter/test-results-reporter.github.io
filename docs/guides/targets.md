@@ -32,6 +32,16 @@ Defines the usage of a target.
 
 Custom inputs to the target.
 
+##### > inputs.title (string)
+
+Title of the target. _Overrides default title._
+
+> Applicable for most extensions.
+
+##### > inputs.title_link (string)
+
+Title with a clickable link. _Overrides default title link._
+
 #### > extensions (object[]) _(optional)_
 
 List of extensions to be enabled on the current target.

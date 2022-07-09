@@ -107,7 +107,7 @@ Rotation users.
 
 Sample config file, where the same user will be mentioned every time.
 
-```js {12-20}
+```js {11-21}
 {
   "reports": [
     {
@@ -147,7 +147,7 @@ Sample config file, where the same user will be mentioned every time.
 
 One of the user will be mentioned based on the [week number](https://www.epochconverter.com/weeknumbers).
 
-```js {12-33}
+```js {11-34}
 {
   "reports": [
     {

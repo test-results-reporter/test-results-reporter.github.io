@@ -3,10 +3,10 @@
  */
 module.exports = {
   title: 'Test Results Reporter',
-  description: 'Report test results to slack, teams and many more',
+  description: 'Report test results to slack, teams, chat and many more',
   head: [
     ['meta', { property: 'og:title', content: 'Test Results Reporter' }],
-    ['meta', { property: 'og:description', content: 'Report test results to slack, microsoft teams and many more' }],
+    ['meta', { property: 'og:description', content: 'Report test results to slack, microsoft teams, google chat and many more' }],
     ['meta', { property: 'og:image', content: 'https://test-results-reporter.github.io/logo.png' }],
     [
       'script',
@@ -45,7 +45,8 @@ module.exports = {
           '/guides/results',
           '/guides/targets',
           '/guides/extensions',
-          '/guides/environment-variables'
+          '/guides/environment-variables',
+          '/guides/conditions'
         ]
       },
       {

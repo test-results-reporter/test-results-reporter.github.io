@@ -3,7 +3,7 @@ home: true
 heroImage: /logo.png
 heroAlt: Logo image
 heroText: Test Results Reporter
-tagline: Publish test results to Microsoft Teams, Slack and many more
+tagline: Publish test results to Microsoft Teams, Slack, Google Chat and many more
 actionText: Get Started
 actionLink: /guides/intro
 features:

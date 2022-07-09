@@ -38,15 +38,15 @@ Defines the usage of a target.
 
 Custom inputs to the extension.
 
-#### > inputs.title (string)
+##### > inputs.title (string)
 
-Title of the extension.
+Title of the extension. _Overrides default title._
 
 > Applicable for most extensions.
 
-#### > inputs.title_link (string)
+##### > inputs.title_link (string)
 
-Title with a clickable link.
+Title with a clickable link. _Overrides default title link._
 
 > Applicable for most extensions.
 

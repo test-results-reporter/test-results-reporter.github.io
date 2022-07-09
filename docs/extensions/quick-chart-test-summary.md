@@ -39,7 +39,7 @@ Quick Chart custom url _(https://your-domain.quickchart.com)_.
 
 #### Default
 
-```json {11-19}
+```json {11-13}
 {
   "reports": [
     {
@@ -69,7 +69,7 @@ Quick Chart custom url _(https://your-domain.quickchart.com)_.
 
 #### Custom URL
 
-```json {11-19}
+```json {11-16}
 {
   "reports": [
     {

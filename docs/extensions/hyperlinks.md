@@ -7,8 +7,6 @@ tags:
 
 Hyperlinks extension will attach links to your teams or slack reports.
 
-> Defaults
-
 ::: details DEFAULTS
 
 - hook: `end`
@@ -53,7 +51,7 @@ Condition on which the given link should be added to the message.
 
 Sample partial config file.
 
-```json {11-25}
+```json {11-26}
 {
   "reports": [
     {
