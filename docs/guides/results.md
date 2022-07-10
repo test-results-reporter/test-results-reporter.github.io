@@ -33,12 +33,9 @@ Name of the test runner.
 
 Path to the test result files.
 
-::: danger LIMITATIONS
-- Currently it supports only one test results report file.
-- No support for wildcard paths.
-:::
-
 ## Config
+
+#### Normal
 
 Sample config file.
 
@@ -56,6 +53,31 @@ Sample config file.
     {
       "type": "testng",
       "files": ["path/to/testng-results.xml"]
+    }
+  ]
+}
+```
+
+#### Wildcards
+
+Merges multiple results into a single result.
+
+> Only `*` wildcard is supported by this tool.
+
+```json {11-14}
+{
+  "targets": [
+    {
+      "name": "teams",
+      "inputs": {
+        "url": "<incoming-webhook-url>"
+      }
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/cypress-results-*.xml"]
     }
   ]
 }
