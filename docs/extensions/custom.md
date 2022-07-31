@@ -1,6 +1,6 @@
 # Custom
 
-Send results to custom targets.
+Attach custom extensions.
 
 ## Inputs
 
@@ -21,10 +21,18 @@ Config file.
     {
       "targets": [
         {
-          "name": "custom",
+          "name": "teams",
           "inputs": {
-            "load": "./custom.js"
-          }
+            "url": "<some-url>"
+          },
+          "extensions": [
+            {
+              "name": "custom",
+              "inputs": {
+                "load": "./custom.js"
+              }
+            }
+          ]
         }
       ],
       "results": [
@@ -41,7 +49,7 @@ Config file.
 custom js file
 
 ```js
-async function run({ target, result }) {
+async function run({ target, result, payload, root_payload }) {
   // custom code
 }
 
@@ -58,10 +66,18 @@ module.exports = {
     {
       "targets": [
         {
-          "name": "custom",
+          "name": "teams",
           "inputs": {
-            "load": async ({ result }) => { }
-          }
+            "url": "<some-url>"
+          },
+          "extensions": [
+            {
+              "name": "custom",
+              "inputs": {
+                "load": async ({ result }) => { }
+              }
+            }
+          ]
         }
       ],
       "results": [

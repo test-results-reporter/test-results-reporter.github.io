@@ -79,3 +79,33 @@ Conditions can also support javascript expressions that returns a boolean. For e
   ]
 }
 ```
+
+### Condition (Function)
+
+The function should return a boolean and it can be asynchronous.
+
+```js {7,14}
+const config = {
+  "reports": [
+    {
+      "targets": [
+         {
+          "name": "teams",
+           "condition": async ({ target, result }) => {
+              return result.failed > 2;
+           },
+          "inputs": {
+            "url": "<teams-failure-channel-incoming-webhook-url>"
+          }
+        }
+      ],
+      "results": [
+        {
+          "type": "testng",
+          "files": ["path/to/testng-results.xml"]
+        }
+      ]
+    }
+  ]
+}
+```

@@ -24,7 +24,7 @@ Array of link objects
 
 Text to display on the message.
 
-#### > link.url (string)
+#### > link.url (string | Function)
 
 Url to link to the given text in the message.
 
@@ -51,7 +51,7 @@ Condition on which the given link should be added to the message.
 
 Sample partial config file.
 
-```json {11-26}
+```js
 {
   "reports": [
     {
@@ -74,6 +74,10 @@ Sample partial config file.
                     "text": "Video",
                     "url": "<video-url>",
                     "condition": "fail"
+                  },
+                  {
+                    "text": "Video",
+                    "url": async ({ result }) => { return '<some-url>' }
                   }
                 ]
               }   

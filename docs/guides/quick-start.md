@@ -2,15 +2,39 @@
 
 You can either use this library as a command line tool or import as an npm package. For either use cases, first we need to create a sample config file or object.
 
-## System Requirements
+## Installation
 
-Install Node.js 10 or above.
+### NPM
 
-> In general most of the CI tools will have node.js installed.
+Install this tool via `npm`.
 
-## Publish Results
+```shell
+npm i test-results-reporter
+```
 
-### CLI
+Or directly execute via `npx`.
+
+```sh
+npx test-results-reporter publish -c path/to/config.json
+```
+
+The above two methods require Node.js version 12 and above to be installed.
+
+### Direct
+
+Directly download the executable via `curl`.
+
+```sh
+curl https://raw.githubusercontent.com/test-results-reporter/reporter/main/scripts/download.sh | bash
+```
+
+Based on your operating system, run the executable. Fo example in linux,
+
+```sh
+./test-results-reporter-linux publish -c path/to/config.json
+```
+
+## Config File
 
 Create a config `json` or `js` file that includes list of `targets` and `results`.
 
@@ -37,7 +61,7 @@ Create a config `json` or `js` file that includes list of `targets` and `results
 }
 ```
 
-To publish the test results, use `npx` to install this library as a command line tool.
+To publish the test results, use `npx`.
 
 ```sh
 npx test-results-reporter publish -c path/to/config.json
@@ -45,18 +69,12 @@ npx test-results-reporter publish -c path/to/config.json
 
 ### Import
 
-Install `test-results-reporter` as a npm package. import into your `js` file.
-
-```shell
-npm i test-results-reporter
-```
-
 Import the package into your `js` file.
 
 ```js
-const { publish } = require('test-results-reporter');
+const { publish, defineConfig } = require('test-results-reporter');
 
-const config = {
+const config = defineConfig({
   "reports": [
     {
       "targets": [
@@ -75,12 +93,12 @@ const config = {
       ]
     }
   ]
-};
+});
 
 await publish({ config });
 ```
 
-Run the file using node.js
+To publish the test results, run the file using `node`.
 
 ```shell
 node report.js
