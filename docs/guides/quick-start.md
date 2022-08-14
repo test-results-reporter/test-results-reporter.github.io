@@ -1,6 +1,6 @@
 # Quick Start
 
-You can either use this library as a command line tool or import as an npm package. For either use cases, first we need to create a sample config file or object.
+You can either download this library directly as a command line tool or install it as an `npm` package. For either use cases, we need to create a `js` or `json` config file.
 
 ## Installation
 
@@ -28,7 +28,7 @@ Directly download the executable via `curl`.
 curl https://raw.githubusercontent.com/test-results-reporter/reporter/main/scripts/download.sh | bash
 ```
 
-Based on your operating system, run the executable. Fo example in linux,
+Based on your operating system, run the executable. For example in linux OS after the completion of download, run the following command 
 
 ```sh
 ./test-results-reporter-linux publish -c path/to/config.json
@@ -36,7 +36,7 @@ Based on your operating system, run the executable. Fo example in linux,
 
 ## Config File
 
-Create a config `json` or `js` file that includes list of `targets` and `results`.
+Create a `json` or `js` config file that includes list of `targets` and `results`.
 
 ```json
 {
