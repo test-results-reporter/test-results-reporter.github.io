@@ -87,7 +87,33 @@ Notice, how we are using the environment varaible `BUILD_URL` in the report.json
 
 ## GitHub Actions
 
-> TODO
+GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production.
+
+Let’s look at an example of workflow. 
+
+```yml
+name: Test
+on:
+  pull_request:
+    branches: 
+      - main
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+      
+      # intermediary steps to run tests
+
+      - run: npx test-results-reporter publish -c path/to/report.json
+        if: ${{ always() }}
+        env:
+          SLACK_URL: ${{ secrets.SLACK_URL }}
+```
 
 ## Jenkins
 
