@@ -23,7 +23,7 @@ steps:
       jdkArchitectureOption: x64
       jdkSourceOption: PreInstalled
   - task: Maven@3
-    displayName: Runing Tests
+    displayName: Running Tests
     continueOnError: true
     inputs:
       mavenPomFile: pom.xml
@@ -33,7 +33,6 @@ steps:
       mavenVersionOption: Default
       mavenAuthenticateFeed: true
       effectivePomSkip: false
-      sonarQubeRunAnalysis: false
       options: test -Dsurefire.suiteXmlFiles=resources/testng.xml
   - script: npx test-results-reporter publish -c resources/report.json
     displayName: Reporting Results
@@ -43,7 +42,7 @@ steps:
 
 #### report.json
 
-Notice, how we are using the environment varaible `BUILD_URL` in the report.json file.
+Notice, how we are using the environment variable `BUILD_URL` in the report.json file.
 
 ```json
 {
