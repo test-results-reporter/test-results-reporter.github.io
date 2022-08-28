@@ -18,37 +18,33 @@ Extension types.
 
 ✅ [Percy Analysis](/extensions/percy-analysis)
 
-## Arguments
+✅ [Custom](/extensions/custom)
 
-#### > name (string)
+## Syntax
 
-Name of the extension.
+```json
+{
+  "name": "hyperlinks",
+  "condition": "fail",
+  "inputs": {
+    "links": [
+      {
+        "text": "Build Logs",
+        "url": "<build-logs-url>"
+      }
+    ]
+  }
+}
+```
 
-#### > condition (string)
-
-Defines the usage of a target.
-
-- `pass`
-- `fail`
-- `passOrFail`
-
-> Defaults to **passOrFail**
-
-#### > inputs (object)
-
-Custom inputs to the extension.
-
-##### > inputs.title (string)
-
-Title of the extension. _Overrides default title._
-
-> Applicable for most extensions.
-
-##### > inputs.title_link (string)
-
-Title with a clickable link. _Overrides default title link._
-
-> Applicable for most extensions.
+- `name` (**string**) - name of the extension.
+  > `hyperlinks`, `mentions`, `report-portal-analysis`, `report-portal-history`, `quick-chart-test-summary`, `percy-analysis`, `custom`
+- `condition?` (**[condition](/guides/conditions)**) - condition of execute the extension.
+- `hook?` (**string**) - workflow hook to run.
+  > `start`, `post-main`, `end`
+- `inputs?` (**object**) - custom inputs to run the extension.
+  - `title?` (**string**) - title of the extension to be displayed. (*applicable for most extension*)
+  - `title_link?` (**string**) - attaches a clickable link to the title. (*applicable for most extension*)
 
 ## Config
 

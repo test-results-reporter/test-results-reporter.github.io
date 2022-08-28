@@ -14,28 +14,27 @@ Hyperlinks extension will attach links to your teams or slack reports.
 
 :::
 
-## Inputs
+## Syntax
 
-#### > links (object[])
+```json
+{
+  "name": "hyperlinks",
+  "condition": "passOrFail",
+  "inputs": {
+    "links": [
+      {
+        "text": "Build Logs",
+        "url": "<build-logs-url>"
+      }
+    ]
+  }
+}
+```
 
-Array of link objects
-
-#### > link.text (string)
-
-Text to display on the message.
-
-#### > link.url (string | Function)
-
-Url to link to the given text in the message.
-
-#### > [Optional] link.condition (string)
-
-Condition on which the given link should be added to the message.
-- `pass`
-- `fail`
-- `passOrFail`
-
-> Defaults to **passOrFail**
+- `links` (**object[]**) - list of link objects.
+  - `text` (**string**) - text to display.
+  - `url` (**string|function**) - custom url to link the above text.
+  - `condition?` (**[condition](/guides/conditions)**) - condition to include this link.
 
 ## Reports
 

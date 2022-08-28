@@ -14,37 +14,21 @@ Target types.
 
 ✅ [Custom](/targets/custom)
 
-## Arguments
+## Syntax
 
-#### > name (string)
+```json
+{
+  "name": "slack",
+  "condition": "fail",
+  "inputs": {}
+}
+```
 
-Name of the target.
-
-#### > condition (string) _(optional)_
-
-Defines the usage of a target.
-
-- `pass`
-- `fail`
-- `passOrFail`  _(default)_
-
-#### > inputs (object)
-
-Custom inputs to the target.
-
-##### > inputs.title (string)
-
-Title of the target. _Overrides default title._
-
-> Applicable for most extensions.
-
-##### > inputs.title_link (string)
-
-Title with a clickable link. _Overrides default title link._
-
-#### > extensions (object[]) _(optional)_
-
-List of extensions to be enabled on the current target.
+- `name` (**string**) - name of the target.
+  > `slack`, `teams`, `chat`, `custom`, `delay`
+- `condition?` (**[condition](/guides/conditions)**) - condition of execute the target.
+- `inputs?` (**object**) - custom inputs to run the target.
+- `extensions?` (**[extensions[]](/guides/extensions)**) - list of extensions to be enabled.
 
 ## Config
 

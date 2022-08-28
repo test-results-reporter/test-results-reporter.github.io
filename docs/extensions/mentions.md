@@ -22,74 +22,39 @@ In general, tagging users will help to maintain accountability on owning test fa
 
 :::
 
-## Inputs
+## Syntax
 
-#### > users (object[]) _(optional)_
+```json
+{
+  "name": "mentions",
+  "inputs": {
+    "users": [
+      {
+        "name": "Jon",
+        "teams_upn": "jon@microsift.com"
+      }
+    ]
+  }
+}
+```
 
-List of users.
 
-#### > users.name (string)
-
-Name of the user.
-
-#### > users.team_upn (string)
-
-User's [UPN](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-userprincipalname) in teams. Mandatory if the target is **teams**.
-
-#### > users.slack_uid (string)
-
-User's [unique id](https://www.workast.com/help/articles/61000165203) in slack. Mandatory if the target is **slack**.
-
-#### > users.chat_uid (string)
-
-User's [unique id](https://stackoverflow.com/a/58923385) in chat. Mandatory if the target is **chat**.
-
-#### > users.enable (boolean) _(optional)_
-
-Enable or disable user's availability for on-call support. 
-
-> If a user is disable, the next user enabled user will be picked. If no user is enabled, then the original user is mentioned.
-
-#### > schedule (object) _(optional)_
-
-On-call schedule.
-
-#### > schedule.layers (object[])
-
-On-call schedule layers. If there are multiple layers, the layer will take precedence in a given time frame.
-
-#### > schedule.layers.start (string) _(optional)_
-
-Start time of the layer mentioned in the format of `HH:MM:SS`.
-
-#### > schedule.layers.end (string) _(optional)_
-
-End time of the layer mentioned in the format of `HH:MM:SS`.
-
-#### > schedule.layers.user (object)
-
-Layer user.
-
->  Use this if there is only one user.
-
-#### > schedule.layers.rotation (object)
-
-Layer rotation. 
-
-> Use this if there are multiple users.
-
-#### > schedule.layers.rotation.every (string)
-
-Rotate a user on the given schedule.
-
-**Supports**
-
-- [day](https://www.epochconverter.com/daynumbers)
-- [week](https://www.epochconverter.com/weeknumbers)
-
-#### > schedule.layers.rotation.users (object[])
-
-Rotation users.
+- `users` (**object[]**) - list of users.
+  - `name` (**string**) - name of the user to display.
+  - `teams_upn?` (**string**) - user's [UPN](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-userprincipalname) in teams. Mandatory if the target is **teams**.
+  - `slack_uid?` (**string**) - user's [unique id](https://www.workast.com/help/articles/61000165203) in slack. Mandatory if the target is **slack**.
+  - `chat_uid?` (**string**) - user's [unique id](https://stackoverflow.com/a/58923385) in chat. Mandatory if the target is **chat**.
+  - `enable?` (**boolean**) - enable or disable user's availability for on-call support. 
+    > If a user is disable, the next user enabled user will be picked. If no user is enabled, then the original user is mentioned.
+- `schedule?` (**object**) - on-call schedule.
+  - `layers` (**object[]**) - on-call schedule layers. If there are multiple layers, the layer will take precedence in a given time frame.
+    - `start?` (**string**) - start time of the layer mentioned in the format of `HH:MM:SS`.
+    - `end?` (**string**) - end time of the layer mentioned in the format of `HH:MM:SS`.
+    - `user?` (**object**) - current layer user. *use this if there is only one user*
+    - `rotation?` (**object**) - layer rotation. *use this if there are multiple users*
+      - `every?` (**string**) - rotate a user on the given schedule.
+        > [day](https://www.epochconverter.com/daynumbers), [week](https://www.epochconverter.com/weeknumbers)
+      - `users?` (**object[]**) - rotation users.
 
 ## Reports
 

@@ -2,16 +2,25 @@
 
 Attach custom extensions.
 
-## Inputs
+## Syntax
 
-#### > load (string | Function)
+```json
+{
+  "name": "custom",
+  "condition": "passOrFail",
+  "inputs": {
+     "load": "./custom.js"
+  }
+}
+```
 
-- it could be the path of the file to load which exports a `run` function.
-- it could be a function
+- `load` (**string|function**)
+  - it could be the path of the file to load which exports a `run` function.
+  - it could be a function
 
 ## Examples
 
-### file path
+### File Path
 
 Config file.
 
@@ -58,7 +67,7 @@ module.exports = {
 }
 ```
 
-### function
+### Function
 
 ```js
 module.exports = {

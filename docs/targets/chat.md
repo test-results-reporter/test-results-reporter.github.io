@@ -8,34 +8,25 @@ tags:
 
 Chat is a communication platform from Google. To send reports to a chat space, we need to create a incoming webhook url. Follow this [docs](https://developers.google.com/chat/how-tos/webhooks#create_a_webhook) to create one.
 
-## Arguments
+## Syntax
 
-#### > url (string)
+```json
+{
+  "name": "chat",
+  "condition": "fail",
+  "inputs": {
+    "url": "<chat-incoming-webhook-url>"
+  }
+}
+```
 
-Incoming webhook url from chat.
-
-#### > publish (string) _(optional)_
-
-Type of report to be published to the chat channel.
-
-- test-summary _(default)_
-- test-summary-slim
-- failure-details
-
-#### > only_failures (boolean) _(optional)_
-
-Only include failed test suite or test case details.
-
-> Defaults to **false**
-
-#### > title (string) _(optional)_
-
-Overrides the default title.
-
-#### > title_suffix (string) _(optional)_
-
-Adds a custom suffix to the title.
-
+- `url` (**string**) - incoming webhook url from chat.
+- `publish?` (**string**) - type of report to be published to the chat space. *defaults to `test-summary`*
+  > `test-summary`, `test-summary-slim`, `failure-details`
+- `only_failures?` (**boolean**) - only include failed test suite or test case details.
+- `title?` (**string**) - title of the target to be displayed.
+- `title_link?` (**string**) - attaches a clickable link to the title.
+- `title_suffix?` (**string**) - adds a custom suffix to the title.
 
 ## Reports
 

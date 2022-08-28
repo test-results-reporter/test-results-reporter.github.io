@@ -17,13 +17,20 @@ This extension is not supported for **google chat** target.
 
 :::
 
-## Inputs
+## Syntax
 
-#### > url (string)
+```json
+{
+  "name": "quick-chart-test-summary",
+  "inputs": {
+    "url": "<quick-chart-custom-url>"
+  }
+}
+```
 
-Quick Chart custom url _(https://your-domain.quickchart.com)_.
+- `url?` (**string**) - quick chart custom url _(https://your-domain.quickchart.com)_.
+  > Defaults to https://quickchart.io
 
-> Defaults to https://quickchart.io
 
 ## Reports
 

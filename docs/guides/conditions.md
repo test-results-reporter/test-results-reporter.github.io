@@ -7,6 +7,8 @@ We can specify the conditions under which each target, extension to run. By defa
 - `pass`
 - `fail`
 - `passOrFail`
+- `always`
+- `never`
 
 ```json {7,14}
 {

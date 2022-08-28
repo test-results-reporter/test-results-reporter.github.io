@@ -2,13 +2,19 @@
 
 Pauses execution for a given number of seconds.
 
-## Arguments
+## Syntax
 
-#### > seconds (numbers)
+```json
+{
+  "name": "delay",
+  "condition": "pass",
+  "inputs": {
+    "seconds": 5
+  }
+}
+```
 
-No. of seconds to sleep.
-
-> Defaults to `5` seconds
+- `seconds` (**number**) - no. of seconds to sleep
 
 ## Examples
 

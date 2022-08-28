@@ -2,33 +2,25 @@
 
 Slack is a communication platform. To send reports to a slack channel, we need to create a incoming webhook url. Follow this [docs](https://api.slack.com/messaging/webhooks) to create one.
 
-## Arguments
+## Syntax
 
-#### > url (string)
+```json
+{
+  "name": "slack",
+  "condition": "fail",
+  "inputs": {
+    "url": "<slack-incoming-webhook-url>"
+  }
+}
+```
 
-Incoming webhook url from slack.
-
-#### > publish (string) _(optional)_
-
-Type of report to be published to the slack channel.
-
-- test-summary _(default)_
-- test-summary-slim
-- failure-details
-
-#### > only_failures (boolean) _(optional)_
-
-Only include failed test suite or test case details.
-
-> Defaults to **false**
-
-#### > title (string) _(optional)_
-
-Overrides the default title.
-
-#### > title_suffix (string) _(optional)_
-
-Adds a custom suffix to the title.
+- `url` (**string**) - incoming webhook url from slack.
+- `publish?` (**string**) - type of report to be published to the slack channel. *defaults to `test-summary`*
+  > `test-summary`, `test-summary-slim`, `failure-details`
+- `only_failures?` (**boolean**) - only include failed test suite or test case details.
+- `title?` (**string**) - title of the target to be displayed.
+- `title_link?` (**string**) - attaches a clickable link to the title.
+- `title_suffix?` (**string**) - adds a custom suffix to the title.
 
 ## Reports
 

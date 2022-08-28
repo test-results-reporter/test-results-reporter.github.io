@@ -8,39 +8,27 @@ tags:
 
 Microsoft Teams is a communication platform. To send reports to a teams channel, we need to create a incoming webhook url. Follow this [docs](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook) to create one.
 
-## Arguments
+## Syntax
 
-#### > url (string)
+```json
+{
+  "name": "teams",
+  "condition": "fail",
+  "inputs": {
+    "url": "<teams-incoming-webhook-url>"
+  }
+}
+```
 
-Incoming webhook url from teams.
-
-#### > publish (string) _(optional)_
-
-Type of report to be published to the teams channel.
-
-- test-summary _(default)_
-- test-summary-slim
-- failure-details
-
-#### > only_failures (boolean) _(optional)_
-
-Only include failed test suite or test case details.
-
-> Defaults to **false**
-
-#### > title (string) _(optional)_
-
-Overrides the default title.
-
-#### > title_suffix (string) _(optional)_
-
-Adds a custom suffix to the title.
-
-#### > width (string) _(optional)_
-
-Controls the width of the message.
-
-> Supports `Full` as width.
+- `url` (**string**) - incoming webhook url from teams.
+- `publish?` (**string**) - type of report to be published to the teams channel. *defaults to `test-summary`*
+  > `test-summary`, `test-summary-slim`, `failure-details`
+- `only_failures?` (**boolean**) - only include failed test suite or test case details.
+- `title?` (**string**) - title of the target to be displayed.
+- `title_link?` (**string**) - attaches a clickable link to the title.
+- `title_suffix?` (**string**) - adds a custom suffix to the title.
+- `width` (**string**) - controls the width of the message.
+  > `Full`
 
 ## Reports
 

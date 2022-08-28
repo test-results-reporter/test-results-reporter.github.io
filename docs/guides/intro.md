@@ -23,16 +23,17 @@ Test Results Reporter in an npm package used to publish test results from test f
 <img height="48" style="margin: 6px;"  src="../assets/images/logos/cucumber.png" alt="cucumber" title="cucumber" />
 <img height="48" style="margin: 6px;"  src="../assets/images/logos/mocha.png" alt="mocha" title="mocha" />
 <img height="48" style="margin: 6px;"  src="../assets/images/logos/xunit.png" alt="xunit" title="xunit" />
+<img height="48" style="margin: 6px;"  src="../assets/images/logos/jmeter.png" alt="jmeter" title="jmeter" />
 
 ## Use Cases
 
-This library is generally used as an alerting tool to forward the test results from our CI/CD environment to different entities like teams or slack.
+This library is generally used as an alerting tool to forward the test results from our CI/CD environment to different entities like microsoft teams, google chat or slack.
 
 ### Supports
 
-- UI Automation Test Results (Selenium, Cypress)
+- UI Automation Test Results (Selenium, Cypress, Playwright)
 - API Automation Test Results (RestAssured, [PactumJS](https://pactumjs.github.io/))
-- Performance Automation Test Results (k6)
+- Performance Automation Test Results (jMeter)
 
 ## Sample Reports
 
