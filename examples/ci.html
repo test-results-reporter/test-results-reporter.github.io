@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CI &amp; CD | Test Results Reporter</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-SRXB8G222W"></script>
+    <script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-SRXB8G222W');</script>
+    <meta name="description" content="Report test results to slack, teams, chat and many more">
+    <meta property="og:title" content="Test Results Reporter">
+    <meta property="og:description" content="Report test results to slack, microsoft teams, google chat and many more">
+    <meta property="og:image" content="https://test-results-reporter.github.io/logo.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.b4c82722.css" as="style"><link rel="preload" href="/assets/js/app.fe2d14ce.js" as="script"><link rel="preload" href="/assets/js/2.40e39368.js" as="script"><link rel="preload" href="/assets/js/18.eaa7f019.js" as="script"><link rel="prefetch" href="/assets/js/10.25cb60b9.js"><link rel="prefetch" href="/assets/js/11.7bd7578f.js"><link rel="prefetch" href="/assets/js/12.945a704f.js"><link rel="prefetch" href="/assets/js/13.85e665f9.js"><link rel="prefetch" href="/assets/js/14.4d870353.js"><link rel="prefetch" href="/assets/js/15.eb0245ee.js"><link rel="prefetch" href="/assets/js/16.ab588312.js"><link rel="prefetch" href="/assets/js/17.77adb304.js"><link rel="prefetch" href="/assets/js/19.d652938e.js"><link rel="prefetch" href="/assets/js/20.420d8e0b.js"><link rel="prefetch" href="/assets/js/21.98df70bc.js"><link rel="prefetch" href="/assets/js/22.6890aa65.js"><link rel="prefetch" href="/assets/js/23.8df63e64.js"><link rel="prefetch" href="/assets/js/24.fce93ca2.js"><link rel="prefetch" href="/assets/js/25.11f94189.js"><link rel="prefetch" href="/assets/js/26.0d6c867a.js"><link rel="prefetch" href="/assets/js/27.0c8d45ee.js"><link rel="prefetch" href="/assets/js/28.ca1b2433.js"><link rel="prefetch" href="/assets/js/29.d5fbfce8.js"><link rel="prefetch" href="/assets/js/3.ae4e15da.js"><link rel="prefetch" href="/assets/js/4.d896854e.js"><link rel="prefetch" href="/assets/js/5.d5b22390.js"><link rel="prefetch" href="/assets/js/6.7c38ad6a.js"><link rel="prefetch" href="/assets/js/7.ae3c99d7.js"><link rel="prefetch" href="/assets/js/8.6838982c.js"><link rel="prefetch" href="/assets/js/9.c87de9df.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b4c82722.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="Test Results Reporter" class="logo"> <span class="site-name can-hide">Test Results Reporter</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://github.com/test-results-reporter/reporter" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  🌟 GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://github.com/test-results-reporter/reporter" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  🌟 GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>📚 Guides</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🎯 Targets</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>🪜 Extensions</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>🥣 Examples</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/examples/frameworks.html" class="sidebar-link">Testing Frameworks</a></li><li><a href="/examples/ci.html" aria-current="page" class="active sidebar-link">CI &amp; CD</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/examples/ci.html#azure-devops-pipelines" class="sidebar-link">Azure DevOps (Pipelines)</a></li><li class="sidebar-sub-header"><a href="/examples/ci.html#github-actions" class="sidebar-link">GitHub Actions</a></li><li class="sidebar-sub-header"><a href="/examples/ci.html#jenkins" class="sidebar-link">Jenkins</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ci-cd"><a href="#ci-cd" class="header-anchor">#</a> CI &amp; CD</h1> <h2 id="azure-devops-pipelines"><a href="#azure-devops-pipelines" class="header-anchor">#</a> Azure DevOps (Pipelines)</h2> <p>Azure Pipelines automatically builds and tests code projects to make them available to others. It works with just about any language or project type. Azure Pipelines combines continuous integration (CI) and continuous delivery (CD) to test and build your code and ship it to any target.</p> <p>Using this tool in Azure Pipelines is very easy and straightforward. Most of the azure build agents has Node.js installed by default. So just add a custom script in your yaml file to publish test results - <code>npx test-results-reporter publish -c path/to/report.json</code></p> <p>Let’s look at an example of running Java TestNG automation tests.</p> <h4 id="pipeline-yaml"><a href="#pipeline-yaml" class="header-anchor">#</a> pipeline.yaml</h4> <p>Make sure to add <code>continueOnError: true</code> in the maven task.</p> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">pool</span><span class="token punctuation">:</span>
+  <span class="token key atrule">vmImage</span><span class="token punctuation">:</span> windows<span class="token punctuation">-</span>latest
+  
+<span class="token key atrule">steps</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">task</span><span class="token punctuation">:</span> JavaToolInstaller@0
+    <span class="token key atrule">inputs</span><span class="token punctuation">:</span>
+      <span class="token key atrule">versionSpec</span><span class="token punctuation">:</span> <span class="token string">'11'</span>
+      <span class="token key atrule">jdkArchitectureOption</span><span class="token punctuation">:</span> x64
+      <span class="token key atrule">jdkSourceOption</span><span class="token punctuation">:</span> PreInstalled
+  <span class="token punctuation">-</span> <span class="token key atrule">task</span><span class="token punctuation">:</span> Maven@3
+    <span class="token key atrule">displayName</span><span class="token punctuation">:</span> Running Tests
+    <span class="token key atrule">continueOnError</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">inputs</span><span class="token punctuation">:</span>
+      <span class="token key atrule">mavenPomFile</span><span class="token punctuation">:</span> pom.xml
+      <span class="token key atrule">publishJUnitResults</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token key atrule">testResultsFiles</span><span class="token punctuation">:</span> <span class="token string">'**/surefire-reports/TEST-*.xml'</span>
+      <span class="token key atrule">javaHomeOption</span><span class="token punctuation">:</span> JDKVersion
+      <span class="token key atrule">mavenVersionOption</span><span class="token punctuation">:</span> Default
+      <span class="token key atrule">mavenAuthenticateFeed</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token key atrule">effectivePomSkip</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+      <span class="token key atrule">options</span><span class="token punctuation">:</span> test <span class="token punctuation">-</span>Dsurefire.suiteXmlFiles=resources/testng.xml
+  <span class="token punctuation">-</span> <span class="token key atrule">script</span><span class="token punctuation">:</span> npx test<span class="token punctuation">-</span>results<span class="token punctuation">-</span>reporter publish <span class="token punctuation">-</span>c resources/report.json
+    <span class="token key atrule">displayName</span><span class="token punctuation">:</span> Reporting Results
+    <span class="token key atrule">env</span><span class="token punctuation">:</span>
+      <span class="token key atrule">BUILD_URL</span><span class="token punctuation">:</span> $(System.TeamFoundationCollectionUri)$(System.TeamProject)/_build/results<span class="token punctuation">?</span>buildId=$(Build.BuildId)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h4 id="report-json"><a href="#report-json" class="header-anchor">#</a> report.json</h4> <p>Notice, how we are using the environment variable <code>BUILD_URL</code> in the report.json file.</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;reports&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;targets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;teams&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;inputs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;teams-url&gt;&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;publish&quot;</span><span class="token operator">:</span> <span class="token string">&quot;test-summary-slim&quot;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;extensions&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+              <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;hyperlinks&quot;</span><span class="token punctuation">,</span>
+              <span class="token property">&quot;inputs&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;links&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                  <span class="token punctuation">{</span>
+                    <span class="token property">&quot;text&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Logs&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;{BUILD_URL}&quot;</span>
+                  <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;results&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;testng&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;files&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">&quot;target/surefire-reports/testng-results.xml&quot;</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><h2 id="github-actions"><a href="#github-actions" class="header-anchor">#</a> GitHub Actions</h2> <p>GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production.</p> <p>Let’s look at an example of workflow.</p> <div class="language-yml line-numbers-mode"><pre class="language-yml"><code><span class="token key atrule">name</span><span class="token punctuation">:</span> Test
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">pull_request</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span> 
+      <span class="token punctuation">-</span> main
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">publish</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v2
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">node-version</span><span class="token punctuation">:</span> <span class="token string">'12.x'</span>
+          <span class="token key atrule">registry-url</span><span class="token punctuation">:</span> <span class="token string">'https://registry.npmjs.org'</span>
+      
+      <span class="token comment"># intermediary steps to run tests</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">run</span><span class="token punctuation">:</span> npx test<span class="token punctuation">-</span>results<span class="token punctuation">-</span>reporter publish <span class="token punctuation">-</span>c path/to/report.json
+        <span class="token key atrule">if</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> always() <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token key atrule">env</span><span class="token punctuation">:</span>
+          <span class="token key atrule">SLACK_URL</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.SLACK_URL <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h2 id="jenkins"><a href="#jenkins" class="header-anchor">#</a> Jenkins</h2> <blockquote><p>TODO</p></blockquote></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/test-results-reporter/test-results-reporter.github.io/edit/main/docs/examples/ci.md" target="_blank" rel="noopener noreferrer">✏️ Edit this page!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">10/29/2022, 9:01:49 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/examples/frameworks.html" class="prev">
+        Testing Frameworks
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.fe2d14ce.js" defer></script><script src="/assets/js/2.40e39368.js" defer></script><script src="/assets/js/18.eaa7f019.js" defer></script>
+  </body>
+</html>
