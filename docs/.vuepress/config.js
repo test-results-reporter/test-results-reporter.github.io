@@ -66,10 +66,12 @@ module.exports = {
         children: [
           '/extensions/hyperlinks',
           '/extensions/mentions',
+          '/extensions/metadata',
           '/extensions/report-portal-analysis',
           '/extensions/report-portal-history',
           '/extensions/quick-chart-test-summary',
-          '/extensions/percy-analysis'
+          '/extensions/percy-analysis',
+          '/extensions/custom'
         ]
       },
       {

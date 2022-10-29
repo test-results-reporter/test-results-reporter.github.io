@@ -10,6 +10,8 @@ Extension types.
 
 ✅ [Mentions](/extensions/mentions)
 
+✅ [Metadata](/extensions/metadata)
+
 ✅ [ReportPortal Analysis](/extensions/report-portal-analysis)
 
 ✅ [ReportPortal History](/extensions/report-portal-history)
