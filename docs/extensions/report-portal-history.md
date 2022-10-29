@@ -43,6 +43,7 @@ This extension will help you to display the results of the last *n* runs.
   If `launch_name` is mentioned, make sure there are no other new runs triggered on the same launch name before the reporting is finished.
   :::
 - `history_depth?` (**number**) - no. of last run results to display. Defaults to `5`.
+- `link_history_via?` (**string**) - link history link via `uuid` or `launchId`. Defaults to `uuid`.
 
 ## Reports
 
