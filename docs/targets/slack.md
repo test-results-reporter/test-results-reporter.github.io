@@ -1,6 +1,6 @@
 # Slack
 
-Slack is a communication platform. To send reports to a slack channel, we need to create a incoming webhook url. Follow this [docs](https://api.slack.com/messaging/webhooks) to create one.
+Slack is a popular communication platform for teams. To send reports to a slack channel, we need to create a incoming webhook url. Follow this [docs](https://api.slack.com/messaging/webhooks) to create one.
 
 ## Syntax
 

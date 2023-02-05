@@ -2,22 +2,27 @@ name: Build and Deploy
 
 on:
   push:
-    branches: 
+    branches:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    
-    - name: Checkout
-      uses: actions/checkout@master
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: yarn
+      - run: npm i
 
-    - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.DOCS_TOKEN }}
-        TARGET_REPO: test-results-reporter/test-results-reporter.github.io
-        TARGET_BRANCH: docs
-        BUILD_SCRIPT: npm i && npm run docs:build
-        BUILD_DIR: docs/.vuepress/dist
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.DOCS_TOKEN }}
+          publish_dir: docs/.vitepress/dist
