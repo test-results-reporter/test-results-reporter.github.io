@@ -38,7 +38,9 @@ Based on your operating system, run the executable. For example in linux OS afte
 
 Create a `json` or `js` config file that includes list of `targets` and `results`.
 
-```json
+::: code-group
+
+```json [config.json]
 {
   "reports": [
     {
@@ -60,6 +62,31 @@ Create a `json` or `js` config file that includes list of `targets` and `results
   ]
 }
 ```
+
+```js [config.js]
+module.exports = {
+  "reports": [
+    {
+      "targets": [
+        {
+          "name": "teams",
+          "inputs": {
+            "url": "<teams-incoming-webhook-url>"
+          }
+        }
+      ],
+      "results": [
+        {
+          "type": "testng",
+          "files": ["path/to/testng-results.xml"]
+        }
+      ]
+    }
+  ]
+}
+```
+
+:::
 
 To publish the test results, use `npx`.
 

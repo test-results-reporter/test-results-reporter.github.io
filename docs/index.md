@@ -1,11 +1,19 @@
 ---
-home: true
-heroImage: /logo.png
-heroAlt: Logo image
-heroText: Test Results Reporter
-tagline: Publish test results to Microsoft Teams, Slack, Google Chat and many more
-actionText: Get Started
-actionLink: /guides/intro
+layout: home
+
+hero:
+  name: Test Results Reporter
+  tagline: Streamline team collaboration and stay informed with test results delivered to Microsoft Teams, Slack, Google Chat and many more...
+  image:
+    src: /logo.png
+    alt: VitePress
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /guides/
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/test-results-reporter/reporter
 features:
   - title: Simple
     details: Minimal setup for reporting your test results to entities like Slack or Teams from different test frameworks.
@@ -13,9 +21,34 @@ features:
     details: Easily extendable to support custom targets and extensions.
   - title: Declarative
     details: JSON centered simple declarative config file for publishing test results.
-footer: MIT Licensed | Copyright © 2022
+footer: MIT Licensed | Copyright © 2023
 ---
 
+<script setup>
+import { VPTeamMembers } from 'vitepress/theme'
 
+const members = [
+  {
+    avatar: 'https://github.com/ASaiAnudeep.png',
+    name: 'Anudeep',
+    title: 'Core Team',
+    sponsor: 'https://github.com/sponsors/ASaiAnudeep',
+    links: [
+      { icon: 'github', link: 'https://github.com/ASaiAnudeep' }
+    ]
+  },
+  {
+    avatar: 'https://github.com/leelaprasadv.png',
+    name: 'Leela Prasad',
+    title: 'Core Team',
+    links: [
+      { icon: 'github', link: 'https://github.com/leelaprasadv' }
+    ]
+  },
+]
+</script>
 
-
+<br>
+<hr>
+<br>
+<VPTeamMembers size="small" :members="members" />
