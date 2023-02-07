@@ -46,6 +46,12 @@ const config = defineConfig({
       text: 'Edit this page on GitHub'
     },
 
+    algolia: {
+      appId: 'F3770ED7MS',
+      apiKey: 'f194b97f485bfbfaf59661417fec4220',
+      indexName: 'test-results-reporterio'
+    },
+
     nav: [
       { text: 'Guides', link: '/guides/', activeMatch: '/guides/' },
       {
