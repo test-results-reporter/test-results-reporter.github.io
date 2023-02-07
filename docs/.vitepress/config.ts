@@ -49,7 +49,7 @@ const config = defineConfig({
     algolia: {
       appId: 'F3770ED7MS',
       apiKey: 'f194b97f485bfbfaf59661417fec4220',
-      indexName: 'test-results-reporterio'
+      indexName: 'test-results-reporterio_test-results-reporterio'
     },
 
     nav: [
