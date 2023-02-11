@@ -24,6 +24,7 @@ InfluxDB is an open source time series platform. This includes APIs for storing 
 - `measurement_test_suite?` (**string**) - test suite measurement name - Defaults to `TestSuite`
 - `measurement_test_case?` (**string**) - test case measurement name - Defaults to `TestCase`
 - `tags?` (**object**) - custom key-value pair tags to add
+- `fields?` (**object**) - custom key-value pair tags to add
 
 
 ## Examples

@@ -1,6 +1,6 @@
 # Extensions
 
-Extensions add additional behavior to the targets.
+Extensions enhance the capabilities of targets by adding additional behavior.
 
 ## Supports
 
@@ -45,12 +45,12 @@ Extension types.
 - `hook?` (**string**) - workflow hook to run.
   > `start`, `post-main`, `end`
 - `inputs?` (**object**) - custom inputs to run the extension.
-  - `title?` (**string**) - title of the extension to be displayed. (*applicable for most extension*)
-  - `title_link?` (**string**) - attaches a clickable link to the title. (*applicable for most extension*)
+  - `title?` (**string**) - title of the extension to be displayed. (*applicable for most extensions*)
+  - `title_link?` (**string**) - attaches a clickable link to the title. (*applicable for most extensions*)
 
 ## Config
 
-Sample partial config file.
+Sample config file.
 
 ```json {9-19}
 {

@@ -1,6 +1,8 @@
 # Conditions
 
-We can specify the conditions under which each target, extension to run. By default, a target or extension will have default condition tied to the test results. For example, targets like `slack` or `teams` will run all the times and extensions like `report-portal-analysis` or `mentions` will only run when there are test failures.
+Conditions allows teams to fine-tune the publishing process to meet their specific needs, ensuring that they receive only the information they require in real-time.
+
+We can specify the conditions under which each target or extension to run. By default, a target or extension will have default condition tied to the test results. For example, targets like `slack` or `teams` will run for all the test runs and extensions like `report-portal-analysis` or `mentions` will only run when there are test failures.
 
 ### Condition (Test Results)
 
