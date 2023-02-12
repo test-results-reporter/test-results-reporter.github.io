@@ -20,19 +20,31 @@ This library uses [test-results-parser](https://github.com/test-results-reporter
 
 ✅ JMeter  (*aggregate.csv*)
 
+✅ JMeter JTL
+
+> The .jtl file should contain headers and all the requests in test plan should be wrapped around [transaction controllers](https://jmeter.apache.org/usermanual/component_reference.html#Transaction_Controller).
+
 
 ## Syntax
 
+### Functional
+
 ```json
-// functional
 {
   "type": "testng",
-  "files": ["path/to/results-file"]
+  "files": ["path/to/results-file.xml"]
 }
 ```
 
+- `type` (**string**) - name of the test results file format.
+  > `mocha`, `testng`, `junit`, `xunit`, `cucumber`
+
+- `files` (**string[]**) - path to the test result files. (*allows `*` wild card*)
+
+
+### Non-Functional
+
 ```json
-// non-functional
 {
   "type": "jmeter",
   "files": ["tests/data/jmeter/sample.csv"],
@@ -46,13 +58,13 @@ This library uses [test-results-parser](https://github.com/test-results-reporter
 ```
 
 - `type` (**string**) - name of the test results file format.
-  > `mocha`, `testng`, `junit`, `xunit`, `cucumber`, `jmeter`
+  > `jmeter`
 
 - `files` (**string[]**) - path to the test result files. (*allows `*` wild card*)
 
 - `thresholds` (**object[]**) - pass/fail criteria for test metrics.
   - `metric` (**string**)  - a measure on how a system performs under test conditions.
-    > `Samples`, `Duration`, `Errors`, `Data Sent`, `Data Received`
+    > `Samples`, `Duration`, `Errors`, `Data Sent`, `Data Received`, `Latency`
   - `checks` (**string[]**)  - true/false criteria.
     > `sum`, `rate`, `avg`, `min`, `med`, `max`, `p90`, `p95`, `p99`
   - `scope` (**string**) - scope of the threshold to be applied on.
@@ -61,7 +73,7 @@ This library uses [test-results-parser](https://github.com/test-results-reporter
 
 ## Config
 
-#### Normal (Functional)
+### Functional
 
 Sample config file for a TestNG result file.
 
@@ -84,7 +96,32 @@ Sample config file for a TestNG result file.
 }
 ```
 
-#### Normal (Non-Functional)
+#### Wildcards
+
+Merges multiple results into a single result.
+
+> Only `*` wildcard is supported by this tool.
+
+```json {11-14}
+{
+  "targets": [
+    {
+      "name": "teams",
+      "inputs": {
+        "url": "<incoming-webhook-url>"
+      }
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/cypress-results-*.xml"]
+    }
+  ]
+}
+```
+
+### Non-Functional
 
 Sample config file for a JMeter result file.
 
@@ -101,13 +138,13 @@ Sample config file for a JMeter result file.
   "results": [
     {
       "type": "jmeter",
-      "files": ["path/to/aggregate.csv"]
+      "files": ["path/to/result.jtl"]
     }
   ]
 }
 ```
 
-#### Using Thresholds (Non-Functional)
+#### Using Thresholds
 
 Sample config file for a JMeter result file using thresholds.
 
@@ -142,27 +179,3 @@ Sample config file for a JMeter result file using thresholds.
 }
 ```
 
-#### Wildcards
-
-Merges multiple results into a single result.
-
-> Only `*` wildcard is supported by this tool.
-
-```json {11-14}
-{
-  "targets": [
-    {
-      "name": "teams",
-      "inputs": {
-        "url": "<incoming-webhook-url>"
-      }
-    }
-  ],
-  "results": [
-    {
-      "type": "testng",
-      "files": ["path/to/cypress-results-*.xml"]
-    }
-  ]
-}
-```

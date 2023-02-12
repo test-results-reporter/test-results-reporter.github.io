@@ -76,7 +76,11 @@ Enable multiple reporters by using one of the following packages
 
 ## TestNG
 
-> TODO
+If you are using Maven, you can run it from the cmd line really easy, cd into the directory with the testng.xml
+
+```shell
+mvn clean test -DsuiteXmlFile=testng.xml -Dreporter=org.testng.reporters.XMLReporter
+```
 
 
 
