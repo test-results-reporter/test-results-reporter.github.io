@@ -15,9 +15,13 @@ InfluxDB is an open source time series platform. This includes APIs for storing 
 ```
 
 - `url` (**string**) - influxdb url
+- `version?` (**string**) - version of the database | v1 or v2
 - `db` (**string**) - name of the database
 - `username?` (**string**) - username to access database
 - `password?` (**string**) - password to access database
+- `org?` (**string**) - name of the organization
+- `bucket?` (**string**) - name of the bucket
+- `token?` (**string**) - auth token
 - `measurement_perf_run?` (**string**) - performance run measurement name - Defaults to `PerfRun`
 - `measurement_perf_transaction?` (**string**) - performance transaction measurement name - Defaults to `PerfTransaction`
 - `measurement_test_run?` (**string**) - test run measurement name - Defaults to `TestRun`
