@@ -1,6 +1,6 @@
 # Introduction
 
-Publishing automation test results to communication platforms like **Microsoft Teams**, **Slack** or **Google Chat** for easy access and collaboration is a critical accept of software development. It provides immediate visibility into the success or failure of tests, enabling teams to quickly address any issues that arise.
+Publishing automation test results to communication platforms like **Microsoft Teams**, **Slack** or **Google Chat** for easy access and collaboration is a critical aspect of software development. It provides immediate visibility into the success or failure of tests, enabling teams to quickly address any issues that arise.
 
 **Test Results Reporter** automates the process of publishing test results from test frameworks like **TestNG**, **JUnit**, **Mocha**, **Cucumber** and **xUnit** by which teams can save time and effort, and focus on delivering high-quality software that meets customer needs.
 
