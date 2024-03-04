@@ -27,6 +27,7 @@ Microsoft Teams is a communication platform. To send reports to a teams channel,
 - `title?` (**string**) - title of the target to be displayed.
 - `title_link?` (**string**) - attaches a clickable link to the title.
 - `title_suffix?` (**string**) - adds a custom suffix to the title.
+- `max_suites` (**number**) - limit on the number of suites.*defaults to `10`*
 - `width` (**string**) - controls the width of the message.
   > `Full`
 
@@ -64,24 +65,22 @@ This report will include the failed test case names along with the failure reaso
 
 Sample config file.
 
-```json {5-11}
+```json {3-9}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
-        {
-          "name": "teams",
-          "inputs": {
-            "url": "<teams-incoming-webhook-url>",
-            "publish": "test-summary-slim"
-          }
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
-        }
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-incoming-webhook-url>",
+        "publish": "test-summary-slim"
+      }
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": [
+        "path/to/testng-results.xml"
       ]
     }
   ]

@@ -26,30 +26,26 @@ Config file.
 
 ```json {5-11}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "teams",
+      "inputs": {
+        "url": "<some-url>"
+      },
+      "extensions": [
         {
-          "name": "teams",
+          "name": "custom",
           "inputs": {
-            "url": "<some-url>"
-          },
-          "extensions": [
-            {
-              "name": "custom",
-              "inputs": {
-                "load": "./custom.js"
-              }
-            }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
+            "load": "./custom.js"
+          }
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }
@@ -71,30 +67,26 @@ module.exports = {
 
 ```js
 module.exports = {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "teams",
+      "inputs": {
+        "url": "<some-url>"
+      },
+      "extensions": [
         {
-          "name": "teams",
+          "name": "custom",
           "inputs": {
-            "url": "<some-url>"
-          },
-          "extensions": [
-            {
-              "name": "custom",
-              "inputs": {
-                "load": async ({ result }) => { }
-              }
-            }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
+            "load": async ({ result }) => { }
+          }
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }

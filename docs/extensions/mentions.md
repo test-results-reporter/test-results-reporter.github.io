@@ -72,37 +72,33 @@ In general, tagging users will help to maintain accountability on owning test fa
 
 Sample config file, where the same user will be mentioned every time.
 
-```js {11-21}
+```js {9-19}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-incoming-webhook-url>"
+      },
+      "extensions": [
         {
-          "name": "teams",
+          "name": "mentions",
           "inputs": {
-            "url": "<teams-incoming-webhook-url>"
-          },
-          "extensions": [
-            {
-              "name": "mentions",
-              "inputs": {
-                "users": [
-                  {
-                    "name": "Jon",
-                    "teams_upn": "jon@microsift.com"
-                  }
-                ]
-              }   
-            }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
+            "users": [
+              {
+                "name": "Jon",
+                "teams_upn": "jon@microsift.com"
+              }
+            ]
+          }   
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }
@@ -112,50 +108,46 @@ Sample config file, where the same user will be mentioned every time.
 
 One of the user will be mentioned based on the [week number](https://www.epochconverter.com/weeknumbers).
 
-```js {11-34}
+```js {9-32}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "slack",
+      "inputs": {
+        "url": "<slack-incoming-webhook-url>"
+      },
+      "extensions": [
         {
-          "name": "slack",
+          "name": "mentions",
           "inputs": {
-            "url": "<slack-incoming-webhook-url>"
-          },
-          "extensions": [
-            {
-              "name": "mentions",
-              "inputs": {
-                "schedule": {
-                  "layers": [
-                    {
-                      "rotation": {
-                        "every": "week",
-                        "users": [
-                          {
-                            "name": "Jon",
-                            "slack_uid": "ULA15K66N"
-                          },
-                          {
-                            "name": "Mary",
-                            "slack_uid": "ULA15K66M"
-                          }
-                        ]
+            "schedule": {
+              "layers": [
+                {
+                  "rotation": {
+                    "every": "week",
+                    "users": [
+                      {
+                        "name": "Jon",
+                        "slack_uid": "ULA15K66N"
+                      },
+                      {
+                        "name": "Mary",
+                        "slack_uid": "ULA15K66M"
                       }
-                    }
-                  ]
+                    ]
+                  }
                 }
-              }   
+              ]
             }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
+          }   
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }
@@ -165,68 +157,64 @@ One of the user will be mentioned based on the [week number](https://www.epochco
 
 The first layer will be used from `06 AM` to `05 PM` everyday where **Mary** user will be tagged always as **Jon** is disabled. The second layer will be used from `05 PM` to next day `06 AM`.
 
-```js {17-18,25}
+```js {15-16,23}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "slack",
+      "inputs": {
+        "url": "<slack-incoming-webhook-url>"
+      },
+      "extensions": [
         {
-          "name": "slack",
+          "name": "mentions",
           "inputs": {
-            "url": "<slack-incoming-webhook-url>"
-          },
-          "extensions": [
-            {
-              "name": "mentions",
-              "inputs": {
-                "schedule": {
-                  "layers": [
-                    {
-                      "start": "06:00:00",
-                      "end": "17:00:00",
-                      "rotation": {
-                        "every": "week",
-                        "users": [
-                          {
-                            "name": "Jon",
-                            "slack_uid": "ULA15K66N",
-                            "enable": false
-                          },
-                          {
-                            "name": "Mary",
-                            "slack_uid": "ULA15K66M"
-                          }
-                        ]
+            "schedule": {
+              "layers": [
+                {
+                  "start": "06:00:00",
+                  "end": "17:00:00",
+                  "rotation": {
+                    "every": "week",
+                    "users": [
+                      {
+                        "name": "Jon",
+                        "slack_uid": "ULA15K66N",
+                        "enable": false
+                      },
+                      {
+                        "name": "Mary",
+                        "slack_uid": "ULA15K66M"
                       }
-                    },
-                    {
-                      "rotation": {
-                        "every": "day",
-                        "users": [
-                          {
-                            "name": "Gary",
-                            "slack_uid": "ULA15K66A"
-                          },
-                          {
-                            "name": "Zen",
-                            "slack_uid": "ULA15K66B"
-                          }
-                        ]
+                    ]
+                  }
+                },
+                {
+                  "rotation": {
+                    "every": "day",
+                    "users": [
+                      {
+                        "name": "Gary",
+                        "slack_uid": "ULA15K66A"
+                      },
+                      {
+                        "name": "Zen",
+                        "slack_uid": "ULA15K66B"
                       }
-                    }
-                  ]
+                    ]
+                  }
                 }
-              }   
+              ]
             }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
+          }   
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }

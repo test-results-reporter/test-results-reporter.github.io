@@ -64,49 +64,45 @@ Sample partial config file.
 
 ```js
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-incoming-webhook-url>"
+      },
+      "extensions": [
         {
-          "name": "teams",
+          "name": "metadata",
           "inputs": {
-            "url": "<teams-incoming-webhook-url>"
-          },
-          "extensions": [
-            {
-              "name": "metadata",
-              "inputs": {
-                "data": [
-                  {
-                    "key": "Browser",
-                    "value": "chrome"
-                  },
-                  {
-                    "value": "1920*1080"
-                  },
-                  {
-                    "key": "Build Logs",
-                    "value": "<build-logs-url>",
-                    "type": "hyperlink"
-                  },
-                  {
-                    "key": "Screenshots",
-                    "value": "<build-logs-url>",
-                    "type": "hyperlink",
-                    "condition": "fail"
-                  }
-                ]
+            "data": [
+              {
+                "key": "Browser",
+                "value": "chrome"
+              },
+              {
+                "value": "1920*1080"
+              },
+              {
+                "key": "Build Logs",
+                "value": "<build-logs-url>",
+                "type": "hyperlink"
+              },
+              {
+                "key": "Screenshots",
+                "value": "<build-logs-url>",
+                "type": "hyperlink",
+                "condition": "fail"
               }
-            }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
+            ]
+          }
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }

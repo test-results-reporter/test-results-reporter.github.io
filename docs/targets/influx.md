@@ -35,28 +35,26 @@ InfluxDB is an open source time series platform. This includes APIs for storing 
 
 Sample config file.
 
-```json {5-15}
+```json {3-13}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
-        {
-          "name": "influx",
-          "inputs": {
-            "url": "<influx-url>",
-            "db": "TestResults",
-            "tags": {
-              "Team": "QA",
-              "Product": "PactumJS"
-            }
-          }
+      "name": "influx",
+      "inputs": {
+        "url": "<influx-url>",
+        "db": "TestResults",
+        "tags": {
+          "Team": "QA",
+          "Product": "PactumJS"
         }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
-        }
+      }
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": [
+        "path/to/testng-results.xml"
       ]
     }
   ]

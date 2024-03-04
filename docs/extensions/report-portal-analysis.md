@@ -52,35 +52,31 @@ This extension will help you to display the ReportPortal analysis in yours teams
 
 #### Using launch_id
 
-```json {11-19}
+```json {9-17}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-incoming-webhook-url>"
+      },
+      "extensions": [
         {
-          "name": "teams",
+          "name": "report-portal-analysis",
           "inputs": {
-            "url": "<teams-incoming-webhook-url>"
-          },
-          "extensions": [
-            {
-              "name": "report-portal-analysis",
-              "inputs": {
-                "url": "<report-portal-base-url>",
-                "api_key": "<api-key>",
-                "project": "<project-id>",
-                "launch_id": "<launch-id>"
-              }   
-            }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
+            "url": "<report-portal-base-url>",
+            "api_key": "<api-key>",
+            "project": "<project-id>",
+            "launch_id": "<launch-id>"
+          }   
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }
@@ -88,35 +84,31 @@ This extension will help you to display the ReportPortal analysis in yours teams
 
 #### Using launch_name
 
-```json {11-19}
+```json {9-17}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-incoming-webhook-url>"
+      },
+      "extensions": [
         {
-          "name": "teams",
+          "name": "report-portal-analysis",
           "inputs": {
-            "url": "<teams-incoming-webhook-url>"
-          },
-          "extensions": [
-            {
-              "name": "report-portal-analysis",
-              "inputs": {
-                "url": "<report-portal-base-url>",
-                "api_key": "<api-key>",
-                "project": "<project-id>",
-                "launch_name": "<launch-name>"
-              }   
-            }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
+            "url": "<report-portal-base-url>",
+            "api_key": "<api-key>",
+            "project": "<project-id>",
+            "launch_name": "<launch-name>"
+          }   
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }

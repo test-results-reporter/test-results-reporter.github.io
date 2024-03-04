@@ -52,44 +52,40 @@ Sample partial config file.
 
 ```js
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-incoming-webhook-url>"
+      },
+      "extensions": [
         {
-          "name": "teams",
+          "name": "hyperlinks",
           "inputs": {
-            "url": "<teams-incoming-webhook-url>"
-          },
-          "extensions": [
-            {
-              "name": "hyperlinks",
-              "inputs": {
-                "links": [
-                  {
-                    "text": "Build Logs",
-                    "url": "<build-logs-url>"
-                  },
-                  {
-                    "text": "Video",
-                    "url": "<video-url>",
-                    "condition": "fail"
-                  },
-                  {
-                    "text": "Video",
-                    "url": async ({ result }) => { return '<some-url>' }
-                  }
-                ]
-              }   
-            }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
+            "links": [
+              {
+                "text": "Build Logs",
+                "url": "<build-logs-url>"
+              },
+              {
+                "text": "Video",
+                "url": "<video-url>",
+                "condition": "fail"
+              },
+              {
+                "text": "Video",
+                "url": async ({ result }) => { return '<some-url>' }
+              }
+            ]
+          }   
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }

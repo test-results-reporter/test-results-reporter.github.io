@@ -46,37 +46,33 @@ Notice, how we are using the environment variable `BUILD_URL` in the report.json
 
 ```json
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-url>",
+        "publish": "test-summary-slim"
+      },
+      "extensions": [
         {
-          "name": "teams",
+          "name": "hyperlinks",
           "inputs": {
-            "url": "<teams-url>",
-            "publish": "test-summary-slim"
-          },
-          "extensions": [
-            {
-              "name": "hyperlinks",
-              "inputs": {
-                "links": [
-                  {
-                    "text": "Logs",
-                    "url": "{BUILD_URL}"
-                  }
-                ]
+            "links": [
+              {
+                "text": "Logs",
+                "url": "{BUILD_URL}"
               }
-            }
-          ]
+            ]
+          }
         }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": [
-            "target/surefire-reports/testng-results.xml"
-          ]
-        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": [
+        "target/surefire-reports/testng-results.xml"
       ]
     }
   ]

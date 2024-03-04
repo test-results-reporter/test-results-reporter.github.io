@@ -12,32 +12,28 @@ We can specify the conditions under which each target or extension to run. By de
 - `always`
 - `never`
 
-```json {7,14}
+```json {5,12}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
-        {
-          "name": "teams",
-          "condition": "pass",
-          "inputs": {
-            "url": "<teams-success-channel-incoming-webhook-url>"
-          }
-        },
-         {
-          "name": "teams",
-           "condition": "fail",
-          "inputs": {
-            "url": "<teams-failure-channel-incoming-webhook-url>"
-          }
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
-        }
-      ]
+      "name": "teams",
+      "condition": "pass",
+      "inputs": {
+        "url": "<teams-success-channel-incoming-webhook-url>"
+      }
+    },
+     {
+      "name": "teams",
+       "condition": "fail",
+      "inputs": {
+        "url": "<teams-failure-channel-incoming-webhook-url>"
+      }
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }
@@ -47,38 +43,34 @@ We can specify the conditions under which each target or extension to run. By de
 
 Conditions can also support javascript expressions that returns a boolean. For example, take a look at enabling a extension based on environment variable `GIT_BRANCH`.
 
-```js {13}
+```json {11}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-incoming-webhook-url>"
+      },
+      "extensions": [
         {
-          "name": "teams",
+          "name": "mentions",
+          "condition": "{GIT_BRANCH} === 'main'",
           "inputs": {
-            "url": "<teams-incoming-webhook-url>"
-          },
-          "extensions": [
-            {
-              "name": "mentions",
-              "condition": "{GIT_BRANCH} === 'main'",
-              "inputs": {
-                "users": [
-                  {
-                    "name": "Jon",
-                    "teams_upn": "jon@microsift.com"
-                  }
-                ]
-              }   
-            }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
+            "users": [
+              {
+                "name": "Jon",
+                "teams_upn": "jon@microsift.com"
+              }
+            ]
+          }   
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }
@@ -88,27 +80,23 @@ Conditions can also support javascript expressions that returns a boolean. For e
 
 The function should return a boolean and it can be asynchronous.
 
-```js {7,14}
+```js {5,12}
 const config = {
-  "reports": [
+  "targets": [
+     {
+      "name": "teams",
+       "condition": async ({ target, result }) => {
+          return result.failed > 2;
+       },
+      "inputs": {
+        "url": "<teams-failure-channel-incoming-webhook-url>"
+      }
+    }
+  ],
+  "results": [
     {
-      "targets": [
-         {
-          "name": "teams",
-           "condition": async ({ target, result }) => {
-              return result.failed > 2;
-           },
-          "inputs": {
-            "url": "<teams-failure-channel-incoming-webhook-url>"
-          }
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
-        }
-      ]
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }

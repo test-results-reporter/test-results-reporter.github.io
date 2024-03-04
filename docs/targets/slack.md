@@ -21,6 +21,7 @@ Slack is a popular communication platform for teams. To send reports to a slack 
 - `title?` (**string**) - title of the target to be displayed.
 - `title_link?` (**string**) - attaches a clickable link to the title.
 - `title_suffix?` (**string**) - adds a custom suffix to the title.
+- `max_suites` (**number**) - limit on the number of suites.*defaults to `10`*
 
 ## Reports
 
@@ -56,24 +57,22 @@ This report will include the failed test case names along with the failure reaso
 
 Sample config file.
 
-```json {5-11}
+```json {3-9}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
-        {
-          "name": "slack",
-          "inputs": {
-            "url": "<slack-incoming-webhook-url>",
-            "publish": "test-summary-slim"
-          }
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
-        }
+      "name": "slack",
+      "inputs": {
+        "url": "<slack-incoming-webhook-url>",
+        "publish": "test-summary-slim"
+      }
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": [
+        "path/to/testng-results.xml"
       ]
     }
   ]

@@ -42,21 +42,19 @@ Create a `json` or `js` config file that includes list of `targets` and `results
 
 ```json [config.json]
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
-        {
-          "name": "teams",
-          "inputs": {
-            "url": "<teams-incoming-webhook-url>"
-          }
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
-        }
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-incoming-webhook-url>"
+      }
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": [
+        "path/to/testng-results.xml"
       ]
     }
   ]
@@ -65,22 +63,18 @@ Create a `json` or `js` config file that includes list of `targets` and `results
 
 ```js [config.js]
 module.exports = {
-  "reports": [
+  "targets": [
     {
-      "targets": [
-        {
-          "name": "teams",
-          "inputs": {
-            "url": "<teams-incoming-webhook-url>"
-          }
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
-        }
-      ]
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-incoming-webhook-url>"
+      }
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }
@@ -102,22 +96,18 @@ Import the package into your `js` file.
 const { publish, defineConfig } = require('test-results-reporter');
 
 const config = defineConfig({
-  "reports": [
+  "targets": [
     {
-      "targets": [
-        {
-          "name": "teams",
-          "inputs": {
-            "url": "<teams-incoming-webhook-url>"
-          }
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
-        }
-      ]
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-incoming-webhook-url>"
+      }
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 });

@@ -59,35 +59,31 @@ This extension will help you to display the results of the last *n* runs.
 
 #### Using launch_id
 
-```json {11-19}
+```json {9-17}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-incoming-webhook-url>"
+      },
+      "extensions": [
         {
-          "name": "teams",
+          "name": "report-portal-history",
           "inputs": {
-            "url": "<teams-incoming-webhook-url>"
-          },
-          "extensions": [
-            {
-              "name": "report-portal-history",
-              "inputs": {
-                "url": "<report-portal-base-url>",
-                "api_key": "<api-key>",
-                "project": "<project-id>",
-                "launch_id": "<launch-id>"
-              }   
-            }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
+            "url": "<report-portal-base-url>",
+            "api_key": "<api-key>",
+            "project": "<project-id>",
+            "launch_id": "<launch-id>"
+          }   
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }
@@ -95,36 +91,32 @@ This extension will help you to display the results of the last *n* runs.
 
 #### Using launch_name and history_depth to fetch last 10 runs
 
-```json {11-20}
+```json {9-18}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
+      "name": "teams",
+      "inputs": {
+        "url": "<teams-incoming-webhook-url>"
+      },
+      "extensions": [
         {
-          "name": "teams",
+          "name": "report-portal-history",
           "inputs": {
-            "url": "<teams-incoming-webhook-url>"
-          },
-          "extensions": [
-            {
-              "name": "report-portal-history",
-              "inputs": {
-                "url": "<report-portal-base-url>",
-                "api_key": "<api-key>",
-                "project": "<project-id>",
-                "launch_name": "<launch-name>",
-                "history_depth": 10
-              }   
-            }
-          ]
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
+            "url": "<report-portal-base-url>",
+            "api_key": "<api-key>",
+            "project": "<project-id>",
+            "launch_name": "<launch-name>",
+            "history_depth": 10
+          }   
         }
       ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
     }
   ]
 }

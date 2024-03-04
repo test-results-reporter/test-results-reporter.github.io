@@ -18,30 +18,28 @@ Pauses execution for a given number of seconds.
 
 ## Examples
 
-```json {5-10}
+```json {3-8}
 {
-  "reports": [
+  "targets": [
     {
-      "targets": [
-        {
-          "name": "delay",
-          "inputs": {
-            "seconds": 10
-          }
-        },
-        {
-          "name": "slack",
-          "inputs": {
-            "url": "<slack-incoming-webhook-url>",
-            "publish": "test-summary-slim"
-          }
-        }
-      ],
-      "results": [
-        {
-          "type": "testng",
-          "files": ["path/to/testng-results.xml"]
-        }
+      "name": "delay",
+      "inputs": {
+        "seconds": 10
+      }
+    },
+    {
+      "name": "slack",
+      "inputs": {
+        "url": "<slack-incoming-webhook-url>",
+        "publish": "test-summary-slim"
+      }
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": [
+        "path/to/testng-results.xml"
       ]
     }
   ]
