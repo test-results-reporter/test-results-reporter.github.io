@@ -77,7 +77,7 @@ Sample partial config file.
                 "url": async ({ result }) => { return '<some-url>' }
               }
             ]
-          }   
+          }
         }
       ]
     }
@@ -85,7 +85,9 @@ Sample partial config file.
   "results": [
     {
       "type": "testng",
-      "files": ["path/to/testng-results.xml"]
+      "files": [
+        "path/to/testng-results.xml"
+      ]
     }
   ]
 }

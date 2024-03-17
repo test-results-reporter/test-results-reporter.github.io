@@ -3,9 +3,9 @@ const github = 'https://github.com/test-results-reporter/reporter';
 const releases = 'https://github.com/test-results-reporter/reporter/releases';
 const packages = 'https://www.npmjs.com/package/test-results-reporter';
 
+import { createWriteStream } from 'node:fs';
+import { resolve } from 'node:path';
 import { SitemapStream } from 'sitemap';
-import { createWriteStream } from 'node:fs'
-import { resolve } from 'node:path'
 import { defineConfig } from 'vitepress';
 
 const links = []
@@ -96,6 +96,7 @@ const config = defineConfig({
       {
         text: 'Extensions',
         items: [
+          { text: 'CI Info', link: '/extensions/ci-info' },
           { text: 'Hyperlinks', link: '/extensions/hyperlinks' },
           { text: 'Mentions', link: '/extensions/mentions' },
           { text: 'Metadata', link: '/extensions/metadata' },

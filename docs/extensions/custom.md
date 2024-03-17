@@ -9,7 +9,7 @@ Attach custom extensions.
   "name": "custom",
   "condition": "passOrFail",
   "inputs": {
-     "load": "./custom.js"
+    "load": "./custom.js"
   }
 }
 ```
@@ -59,35 +59,35 @@ async function run({ target, result, payload, root_payload }) {
 }
 
 module.exports = {
-  run
-}
+  run,
+};
 ```
 
 ### Function
 
 ```js
 module.exports = {
-  "targets": [
+  targets: [
     {
-      "name": "teams",
-      "inputs": {
-        "url": "<some-url>"
+      name: "teams",
+      inputs: {
+        url: "<some-url>",
       },
-      "extensions": [
+      extensions: [
         {
-          "name": "custom",
-          "inputs": {
-            "load": async ({ result }) => { }
-          }
-        }
-      ]
-    }
+          name: "custom",
+          inputs: {
+            load: async ({ result }) => {},
+          },
+        },
+      ],
+    },
   ],
-  "results": [
+  results: [
     {
-      "type": "testng",
-      "files": ["path/to/testng-results.xml"]
-    }
-  ]
-}
+      type: "testng",
+      files: ["path/to/testng-results.xml"],
+    },
+  ],
+};
 ```

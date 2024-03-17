@@ -72,7 +72,7 @@ Enable multiple reporters by using one of the following packages
 
 - [mocha-multi](https://www.npmjs.com/package/mocha-multi)
 - [mocha-multi-reporters](https://www.npmjs.com/package/mocha-multi-reporters)
-:::
+  :::
 
 ## TestNG
 
@@ -81,6 +81,3 @@ If you are using Maven, you can run it from the cmd line really easy, cd into th
 ```shell
 mvn clean test -DsuiteXmlFile=testng.xml -Dreporter=org.testng.reporters.XMLReporter
 ```
-
-
-

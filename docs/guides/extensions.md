@@ -6,6 +6,8 @@ Extensions enhance the capabilities of targets by adding additional behavior.
 
 Extension types.
 
+✅ [CI Info](/extensions/ci-info)
+
 ✅ [Hyperlinks](/extensions/hyperlinks)
 
 ✅ [Mentions](/extensions/mentions)
