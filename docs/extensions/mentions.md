@@ -43,6 +43,8 @@ In general, tagging users will help to maintain accountability on owning test fa
   - `name` (**string**) - name of the user to display.
   - `teams_upn?` (**string**) - user's [UPN](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-userprincipalname) in teams. Mandatory if the target is **teams**.
   - `slack_uid?` (**string**) - user's [unique id](https://www.workast.com/help/articles/61000165203) in slack. Mandatory if the target is **slack**.
+  - `slack_gid?` (**string**) - user group's [unique id](https://www.reddit.com/r/Slack/comments/12fcak2/comment/k5b96wv) in slack.
+  > Do not add both `slack_uid` and `slack_gid` in a single user block for a user mention. In a single user object, mention either one of them.
   - `chat_uid?` (**string**) - user's [unique id](https://stackoverflow.com/a/58923385) in chat. Mandatory if the target is **chat**.
   - `enable?` (**boolean**) - enable or disable user's availability for on-call support. 
     > If a user is disable, the next user enabled user will be picked. If no user is enabled, then the original user is mentioned.
@@ -103,6 +105,82 @@ Sample config file, where the same user will be mentioned every time.
   ]
 }
 ```
+
+### Mentioning a user group in slack
+
+```js {9-19}
+{
+  "targets": [
+    {
+      "name": "slack",
+      "inputs": {
+        "url": "<slack-incoming-webhook-url>"
+      },
+      "extensions": [
+        {
+          "name": "mentions",
+          "inputs": {
+            "users": [
+              {
+                "name": "team-awesome",
+                "slack_gid": "S0123456789"
+              }
+            ]
+          }   
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
+    }
+  ]
+}
+```
+
+
+### Mentioning a special user group in slack
+
+You can mention `here`, `channel` and `everyone`.
+
+> Note: Use lowercase for special mentions
+
+```js {9-19}
+{
+  "targets": [
+    {
+      "name": "slack",
+      "inputs": {
+        "url": "<slack-incoming-webhook-url>"
+      },
+      "extensions": [
+        {
+          "name": "mentions",
+          "inputs": {
+            "users": [
+              {
+                "name": "here",
+                "slack_gid": "here"
+              }
+            ]
+          }   
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "type": "testng",
+      "files": ["path/to/testng-results.xml"]
+    }
+  ]
+}
+```
+
+
+
 
 #### Mentioning a user via schedule.
 
