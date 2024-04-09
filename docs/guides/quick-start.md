@@ -1,52 +1,58 @@
 # Quick Start
 
-You can either download this library directly as a command line tool or install it as an `npm` package. For either use cases, we need to create a `js` or `json` config file.
+This guide walks you through creating a configuration file for sending automation test results to a Slack channel or others using the `test-results-reporter` package.
 
-## Installation
+## 1. Create Config File
 
-### NPM
+Create a new file (e.g., `config.json`). The configuration file is written in `JSON` format (*can also be a .js file*), which uses key-value pairs to define settings.
 
-Install this tool via `npm`.
-
-```shell
-npm i test-results-reporter
+```json
+{}
 ```
 
-Or directly execute via `npx`.
+## 2. Specify Test Results File
 
-```sh
-npx test-results-reporter publish -c path/to/config.json
+This section defines the test results files that the reporter will process.
+
+- `type` (string): This specifies the type of testing framework used to generate the results file. It supports various popular test results formats - `junit`, `testng`, `cucumber`, `xunit`, `mocha`, `jmeter`, etc.
+
+- `files` (array): This list contains the paths to your test results files (XML files for TestNG and JUnit). You can add multiple paths if you have multiple results files or use wildcard expressions.
+
+You can find more details in the documentation [Results](/guides/results).
+
+```json
+{
+  "results": [
+    {
+      "type": "testng",
+      "files": [
+        "path/to/testng-results.xml"
+      ]
+    }
+  ]
+}
 ```
 
-The above two methods require Node.js version 12 and above to be installed.
+## 3. Specify Targets
 
-### Direct
 
-Directly download the executable via `curl`.
+This section defines where you want to send your test results. In this case, we'll have one target: Slack.
 
-```sh
-curl https://raw.githubusercontent.com/test-results-reporter/reporter/main/scripts/download.sh | bash
-```
+- `name` (string): This specifies the name for this target. Set it to "slack".
+- `inputs` (object): This object contains configurations specific to the chosen target.
+  - `url` (string): To send reports to a slack channel, we need to create a incoming webhook url. Follow this [docs](https://api.slack.com/messaging/webhooks) to create one.
 
-Based on your operating system, run the executable. For example in linux OS after the completion of download, run the following command 
 
-```sh
-./test-results-reporter-linux publish -c path/to/config.json
-```
+You can find more details in the documentation [Targets](/guides/targets) and [Slack](/targets/slack).
 
-## Config File
 
-Create a `json` or `js` config file that includes list of `targets` and `results`.
-
-::: code-group
-
-```json [config.json]
+```json
 {
   "targets": [
     {
-      "name": "teams",
+      "name": "slack",
       "inputs": {
-        "url": "<teams-incoming-webhook-url>"
+        "url": "<slack-incoming-webhook-url>"
       }
     }
   ],
@@ -61,34 +67,40 @@ Create a `json` or `js` config file that includes list of `targets` and `results
 }
 ```
 
-```js [config.js]
-module.exports = {
-  "targets": [
-    {
-      "name": "teams",
-      "inputs": {
-        "url": "<teams-incoming-webhook-url>"
-      }
-    }
-  ],
-  "results": [
-    {
-      "type": "testng",
-      "files": ["path/to/testng-results.xml"]
-    }
-  ]
-}
+## 4. Publishing Results
+
+We can publish results either via `curl`, `npx` or `npm`
+
+### Curl
+
+Download the executable via `curl`.
+
+```sh
+curl https://raw.githubusercontent.com/test-results-reporter/reporter/main/scripts/download.sh | bash
 ```
 
-:::
+After download completes, run the executable based on you operating system.
 
-To publish the test results, use `npx`.
+```sh
+# linux
+./test-results-reporter-linux publish -c path/to/config.json
+```
+
+### npx
+
+Directly execute via `npx`.
 
 ```sh
 npx test-results-reporter publish -c path/to/config.json
 ```
 
-### Import
+### npm
+
+Install the package via `npm`.
+
+```sh
+npm i test-results-reporter
+```
 
 Import the package into your `js` file.
 
@@ -98,16 +110,18 @@ const { publish, defineConfig } = require('test-results-reporter');
 const config = defineConfig({
   "targets": [
     {
-      "name": "teams",
+      "name": "slack",
       "inputs": {
-        "url": "<teams-incoming-webhook-url>"
+        "url": "<slack-incoming-webhook-url>"
       }
     }
   ],
   "results": [
     {
       "type": "testng",
-      "files": ["path/to/testng-results.xml"]
+      "files": [
+        "path/to/testng-results.xml"
+      ]
     }
   ]
 });
@@ -115,8 +129,10 @@ const config = defineConfig({
 await publish({ config });
 ```
 
-To publish the test results, run the file using `node`.
-
-```shell
+```sh
 node report.js
 ```
+
+::: info
+*Now your test results are sliding into Slack faster than a penguin on ice. Sit back and enjoy.*
+:::
