@@ -44,8 +44,8 @@ This library is generally used as an alerting tool to forward the test results f
 
 ## Need Help
 
-We use Github [Discussions](https://github.com/test-results-reporter/reporter/discussions) to receive feedback, discuss ideas & answer questions. Head over to it and feel free to start a discussion. We are always happy to help 😊.
+We use Github [Discussions](https://github.com/test-results-reporter/testbeats/discussions) to receive feedback, discuss ideas & answer questions. Head over to it and feel free to start a discussion. We are always happy to help 😊.
 
 ## Support Us
 
-Like this project! Star it on [Github](https://github.com/test-results-reporter/reporter) ⭐. Your support means a lot to us.
+Like this project! Star it on [Github](https://github.com/test-results-reporter/testbeats) ⭐. Your support means a lot to us.

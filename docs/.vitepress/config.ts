@@ -1,6 +1,6 @@
 
-const github = 'https://github.com/test-results-reporter/reporter';
-const releases = 'https://github.com/test-results-reporter/reporter/releases';
+const github = 'https://github.com/test-results-reporter/testbeats';
+const releases = 'https://github.com/test-results-reporter/testbeats/releases';
 const packages = 'https://www.npmjs.com/package/test-results-reporter';
 
 import { createWriteStream } from 'node:fs';

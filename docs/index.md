@@ -13,7 +13,7 @@ hero:
       link: /guides/
     - theme: alt
       text: View on GitHub
-      link: https://github.com/test-results-reporter/reporter
+      link: https://github.com/test-results-reporter/testbeats
 features:
   - title: Simple
     details: Minimal setup for reporting your test results to entities like Slack or Teams from different test frameworks.

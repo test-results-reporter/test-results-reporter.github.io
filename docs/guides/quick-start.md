@@ -76,14 +76,14 @@ We can publish results either via `curl`, `npx` or `npm`
 Download the executable via `curl`.
 
 ```sh
-curl https://raw.githubusercontent.com/test-results-reporter/reporter/main/scripts/download.sh | bash
+curl https://raw.githubusercontent.com/test-results-reporter/testbeats/main/scripts/download-latest.sh | bash
 ```
 
 After download completes, run the executable based on you operating system.
 
 ```sh
 # linux
-./test-results-reporter-linux publish -c path/to/config.json
+./testbeats-linux publish -c path/to/config.json
 ```
 
 ### npx
@@ -91,7 +91,7 @@ After download completes, run the executable based on you operating system.
 Directly execute via `npx`.
 
 ```sh
-npx test-results-reporter publish -c path/to/config.json
+npx testbeats publish -c path/to/config.json
 ```
 
 ### npm
@@ -99,13 +99,13 @@ npx test-results-reporter publish -c path/to/config.json
 Install the package via `npm`.
 
 ```sh
-npm i test-results-reporter
+npm i testbeats
 ```
 
 Import the package into your `js` file.
 
 ```js
-const { publish, defineConfig } = require('test-results-reporter');
+const { publish, defineConfig } = require('testbeats');
 
 const config = defineConfig({
   "targets": [
