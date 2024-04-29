@@ -1,10 +1,10 @@
 # Quick Start
 
-This guide walks you through creating a configuration file for sending automation test results to a Slack channel or others using the `test-results-reporter` package.
+This guide walks you through creating a configuration file for sending automation test results to a Slack channel or Microsoft Teams channel or Google Chat.
 
 ## 1. Create Config File
 
-Create a new file (e.g., `config.json`). The configuration file is written in `JSON` format (*can also be a .js file*), which uses key-value pairs to define settings.
+Create a new file, perhaps named `config.json` or even `config.js`. This configuration file adopts the JSON structure, utilizing key-value pairs for setting definitions. Throughout the documentation, JSON files are used for defining configuration.
 
 ```json
 {}

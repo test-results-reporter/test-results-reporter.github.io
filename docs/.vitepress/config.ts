@@ -1,7 +1,7 @@
 
 const github = 'https://github.com/test-results-reporter/testbeats';
 const releases = 'https://github.com/test-results-reporter/testbeats/releases';
-const packages = 'https://www.npmjs.com/package/test-results-reporter';
+const packages = 'https://www.npmjs.com/package/testbeats';
 
 import { createWriteStream } from 'node:fs';
 import { resolve } from 'node:path';

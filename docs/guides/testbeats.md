@@ -71,7 +71,7 @@ The following config file defines settings for sending test results to two desti
 Report your test run results to Slack and TestBeats by running the following command:
 
 ```sh
-npx test-results-reporter publish -c path/to/report.json
+npx testbeats publish -c path/to/report.json
 ```
 
 Congratulations! You're now equipped with the true power of test result reporting.

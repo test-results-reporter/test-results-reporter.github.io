@@ -4,9 +4,9 @@
 
 Azure Pipelines automatically builds and tests code projects to make them available to others. It works with just about any language or project type. Azure Pipelines combines continuous integration (CI) and continuous delivery (CD) to test and build your code and ship it to any target.
 
-Using this tool in Azure Pipelines is very easy and straightforward. Most of the azure build agents has Node.js installed by default. So just add a custom script in your yaml file to publish test results - `npx test-results-reporter publish -c path/to/report.json`
+Using this tool in Azure Pipelines is very easy and straightforward. Most of the azure build agents has Node.js installed by default. So just add a custom script in your yaml file to publish test results - `npx testbeats publish -c path/to/report.json`
 
-Let’s look at an example of running Java TestNG automation tests. 
+Let’s look at an example of running Java TestNG automation tests.
 
 #### pipeline.yaml
 
@@ -15,7 +15,7 @@ Make sure to add `continueOnError: true` in the maven task.
 ```yaml
 pool:
   vmImage: windows-latest
-  
+
 steps:
   - task: JavaToolInstaller@0
     inputs:
@@ -34,7 +34,7 @@ steps:
       mavenAuthenticateFeed: true
       effectivePomSkip: false
       options: test -Dsurefire.suiteXmlFiles=resources/testng.xml
-  - script: npx test-results-reporter publish -c resources/report.json
+  - script: npx testbeats publish -c resources/report.json
     displayName: Reporting Results
     env:
       BUILD_URL: $(System.TeamFoundationCollectionUri)$(System.TeamProject)/_build/results?buildId=$(Build.BuildId)
@@ -84,13 +84,13 @@ Notice, how we are using the environment variable `BUILD_URL` in the report.json
 
 GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. You can create workflows that build and test every pull request to your repository, or deploy merged pull requests to production.
 
-Let’s look at an example of workflow. 
+Let’s look at an example of workflow.
 
 ```yml
 name: Test
 on:
   pull_request:
-    branches: 
+    branches:
       - main
 jobs:
   publish:
@@ -101,10 +101,10 @@ jobs:
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
-      
+
       # intermediary steps to run tests
 
-      - run: npx test-results-reporter publish -c path/to/report.json
+      - run: npx testbeats publish -c path/to/report.json
         if: ${{ always() }}
         env:
           SLACK_URL: ${{ secrets.SLACK_URL }}
