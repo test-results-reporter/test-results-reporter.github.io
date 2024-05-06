@@ -1,5 +1,6 @@
-# test-results-reporter.github.io
 
-test-results-reporter docs built using [vitepress](https://vitepress.vuejs.org).
+
+> [!CAUTION]
+> This documentation is deprecated. Please check out [testbeats](https://docs.testbeats.com).
 
 

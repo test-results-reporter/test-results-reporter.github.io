@@ -48,6 +48,8 @@ const members = [
     ]
   },
 ]
+
+window.location.href = "https://docs.testbeats.com";
 </script>
 
 <br>
