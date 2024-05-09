@@ -33,6 +33,11 @@ const config = defineConfig({
       {},
       "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-SRXB8G222W');",
     ],
+    [
+      'script',
+      {},
+      "window.location.href = 'https://docs.testbeats.com'"
+    ]
   ],
   themeConfig: {
     logo: '/logo.png',
